@@ -1,0 +1,543 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local MilkyHubM = Instance.new("ScreenGui")
+local LoadingDots = Instance.new("TextLabel")
+local Circle = Instance.new("Frame")
+local TEXT = Instance.new("ImageLabel")
+local AfterWardsFrame = Instance.new("Frame")
+local TopPanel = Instance.new("Frame")
+local Username = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local GameName = Instance.new("TextLabel")
+local Start = Instance.new("TextButton")
+local MainFrame = Instance.new("Frame")
+local TopPanel_2 = Instance.new("Frame")
+local Close_2 = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local Water = Instance.new("TextButton")
+local Thunder = Instance.new("TextButton")
+local Love = Instance.new("TextButton")
+local Sound = Instance.new("TextButton")
+local Stone = Instance.new("TextButton")
+local Mist = Instance.new("TextButton")
+local Serpent = Instance.new("TextButton")
+local Insect = Instance.new("TextButton")
+local Flame = Instance.new("TextButton")
+local Beast = Instance.new("TextButton")
+local Moon = Instance.new("TextButton")
+local Wind = Instance.new("TextButton")
+
+
+--Properties:
+MilkyHubM.Name = "MilkyHubM"
+MilkyHubM.Parent = game.CoreGui
+MilkyHubM.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+print("yes")
+
+LoadingDots.Name = "LoadingDots"
+LoadingDots.Parent = MilkyHubM
+LoadingDots.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadingDots.BackgroundTransparency = 1.000
+LoadingDots.Position = UDim2.new(0.433949798, 0, 0.65160352, 0)
+LoadingDots.Size = UDim2.new(0, 200, 0, 50)
+LoadingDots.Font = Enum.Font.SourceSans
+LoadingDots.Text = ""
+LoadingDots.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadingDots.TextSize = 100.000
+LoadingDots.TextStrokeTransparency = 0.000
+LoadingDots.TextWrapped = true
+
+Circle.Name = "Circle"
+Circle.Parent = MilkyHubM
+Circle.Active = true
+Circle.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+Circle.BackgroundTransparency = 1.000
+Circle.BorderColor3 = Color3.fromRGB(220, 147, 47)
+Circle.BorderSizePixel = 0
+Circle.ClipsDescendants = true
+Circle.Position = UDim2.new(0.426402211, 0, 0.337991834, 0)
+Circle.Size = UDim2.new(0, 222, 0, 222)
+
+print("work??")
+TEXT.Name = "TEXT"
+TEXT.Parent = Circle
+TEXT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TEXT.BackgroundTransparency = 1.000
+TEXT.BorderSizePixel = 0
+TEXT.Position = UDim2.new(-0.0315315314, 0, -0.0360359028, 0)
+TEXT.Size = UDim2.new(0, 236, 0, 236)
+TEXT.Image = "http://www.roblox.com/asset/?id=7860077674"
+TEXT.ImageTransparency = 1.000
+
+AfterWardsFrame.Name = "AfterWardsFrame"
+AfterWardsFrame.Parent = MilkyHubM
+AfterWardsFrame.Active = true
+AfterWardsFrame.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+AfterWardsFrame.BackgroundTransparency = 1.000
+AfterWardsFrame.BorderColor3 = Color3.fromRGB(220, 147, 47)
+AfterWardsFrame.BorderSizePixel = 0
+AfterWardsFrame.ClipsDescendants = true
+AfterWardsFrame.Position = UDim2.new(0.426402211, 0, 0.337991834, 0)
+AfterWardsFrame.Selectable = true
+AfterWardsFrame.Size = UDim2.new(0, 440, 0, 263)
+AfterWardsFrame.Visible = false
+
+TopPanel.Name = "TopPanel"
+TopPanel.Parent = AfterWardsFrame
+TopPanel.Active = true
+TopPanel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TopPanel.BackgroundTransparency = 1.000
+TopPanel.BorderSizePixel = 0
+TopPanel.Selectable = true
+TopPanel.Size = UDim2.new(0, 440, 0, 46)
+
+Username.Name = "Username"
+Username.Parent = TopPanel
+Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Username.BackgroundTransparency = 1.000
+Username.Position = UDim2.new(0.0363636352, 0, 0, 0)
+Username.Size = UDim2.new(0, 184, 0, 46)
+Username.Font = Enum.Font.SourceSans
+Username.Text = "Hello {username}"
+Username.TextColor3 = Color3.fromRGB(159, 109, 73)
+Username.TextScaled = true
+Username.TextSize = 14.000
+Username.TextTransparency = 1.000
+Username.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = TopPanel
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.802272856, 0, 0.173913047, 0)
+Close.Size = UDim2.new(0, 87, 0, 32)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(159, 109, 73)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextTransparency = 1.000
+Close.TextWrapped = true
+
+GameName.Name = "GameName"
+GameName.Parent = AfterWardsFrame
+GameName.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+GameName.BackgroundTransparency = 1.000
+GameName.BorderSizePixel = 0
+GameName.Position = UDim2.new(0.156818181, 0, 0.281616777, 0)
+GameName.Size = UDim2.new(0, 301, 0, 62)
+GameName.Font = Enum.Font.SourceSans
+GameName.Text = "{Game Name Here}"
+GameName.TextColor3 = Color3.fromRGB(159, 109, 73)
+GameName.TextScaled = true
+GameName.TextSize = 14.000
+GameName.TextTransparency = 1.000
+GameName.TextWrapped = true
+
+Start.Name = "Start"
+Start.Parent = AfterWardsFrame
+Start.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Start.BackgroundTransparency = 1.000
+Start.BorderSizePixel = 0
+Start.Position = UDim2.new(0.270454556, 0, 0.631178737, 0)
+Start.Size = UDim2.new(0, 200, 0, 50)
+Start.Font = Enum.Font.SourceSans
+Start.Text = "Start!"
+Start.TextColor3 = Color3.fromRGB(159, 109, 73)
+Start.TextScaled = true
+Start.TextSize = 14.000
+Start.TextTransparency = 1.000
+Start.TextWrapped = true
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = MilkyHubM
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+MainFrame.BorderColor3 = Color3.fromRGB(159, 109, 73)
+MainFrame.BorderSizePixel = 3
+MainFrame.Position = UDim2.new(0.192866579, 0, 0.179039299, 0)
+MainFrame.Selectable = true
+MainFrame.Size = UDim2.new(0, 613, 0, 390)
+MainFrame.Visible = false
+
+TopPanel_2.Name = "TopPanel"
+TopPanel_2.Parent = MainFrame
+TopPanel_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TopPanel_2.BorderColor3 = Color3.fromRGB(159, 109, 73)
+TopPanel_2.Size = UDim2.new(0, 613, 0, 49)
+
+Close_2.Name = "Close"
+Close_2.Parent = TopPanel_2
+Close_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close_2.BackgroundTransparency = 1.000
+Close_2.BorderColor3 = Color3.fromRGB(220, 147, 47)
+Close_2.Position = UDim2.new(0.908645988, 0, -0.0204081628, 0)
+Close_2.Size = UDim2.new(0, 56, 0, 50)
+Close_2.Font = Enum.Font.SourceSans
+Close_2.Text = "X"
+Close_2.TextColor3 = Color3.fromRGB(159, 109, 73)
+Close_2.TextSize = 28.000
+Close_2.TextWrapped = true
+
+Title.Name = "Title"
+Title.Parent = TopPanel_2
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 5
+Title.Position = UDim2.new(-0.084828712, 0, -0.0204081535, 0)
+Title.Size = UDim2.new(0, 246, 0, 50)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Breathings!"
+Title.TextColor3 = Color3.fromRGB(159, 109, 73)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextStrokeTransparency = 0.000
+Title.TextWrapped = true
+
+Water.Name = "Water"
+Water.Parent = MainFrame
+Water.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Water.BackgroundTransparency = 1.000
+Water.Position = UDim2.new(0.0750407875, 0, 0.202564105, 0)
+Water.Size = UDim2.new(0, 111, 0, 51)
+Water.Font = Enum.Font.SourceSans
+Water.Text = "Water"
+Water.TextColor3 = Color3.fromRGB(159, 109, 73)
+Water.TextScaled = true
+Water.TextSize = 14.000
+Water.TextWrapped = true
+
+Thunder.Name = "Thunder"
+Thunder.Parent = MainFrame
+Thunder.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Thunder.BackgroundTransparency = 1.000
+Thunder.Position = UDim2.new(0.409461677, 0, 0.202564105, 0)
+Thunder.Size = UDim2.new(0, 111, 0, 51)
+Thunder.Font = Enum.Font.SourceSans
+Thunder.Text = "Thunder"
+Thunder.TextColor3 = Color3.fromRGB(159, 109, 73)
+Thunder.TextScaled = true
+Thunder.TextSize = 14.000
+Thunder.TextWrapped = true
+
+Love.Name = "Love"
+Love.Parent = MainFrame
+Love.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Love.BackgroundTransparency = 1.000
+Love.Position = UDim2.new(0.748776555, 0, 0.202564105, 0)
+Love.Size = UDim2.new(0, 111, 0, 51)
+Love.Font = Enum.Font.SourceSans
+Love.Text = "Love"
+Love.TextColor3 = Color3.fromRGB(159, 109, 73)
+Love.TextScaled = true
+Love.TextSize = 14.000
+Love.TextWrapped = true
+
+Sound.Name = "Sound"
+Sound.Parent = MainFrame
+Sound.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Sound.BackgroundTransparency = 1.000
+Sound.Position = UDim2.new(0.748776555, 0, 0.333333343, 0)
+Sound.Size = UDim2.new(0, 111, 0, 51)
+Sound.Font = Enum.Font.SourceSans
+Sound.Text = "Sound"
+Sound.TextColor3 = Color3.fromRGB(159, 109, 73)
+Sound.TextScaled = true
+Sound.TextSize = 14.000
+Sound.TextWrapped = true
+
+Stone.Name = "Stone"
+Stone.Parent = MainFrame
+Stone.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Stone.BackgroundTransparency = 1.000
+Stone.Position = UDim2.new(0.0750407875, 0, 0.333333343, 0)
+Stone.Size = UDim2.new(0, 111, 0, 51)
+Stone.Font = Enum.Font.SourceSans
+Stone.Text = "Stone"
+Stone.TextColor3 = Color3.fromRGB(159, 109, 73)
+Stone.TextScaled = true
+Stone.TextSize = 14.000
+Stone.TextWrapped = true
+
+Mist.Name = "Mist"
+Mist.Parent = MainFrame
+Mist.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Mist.BackgroundTransparency = 1.000
+Mist.Position = UDim2.new(0.409461677, 0, 0.333333343, 0)
+Mist.Size = UDim2.new(0, 111, 0, 51)
+Mist.Font = Enum.Font.SourceSans
+Mist.Text = "Mist"
+Mist.TextColor3 = Color3.fromRGB(159, 109, 73)
+Mist.TextScaled = true
+Mist.TextSize = 14.000
+Mist.TextWrapped = true
+
+Serpent.Name = "Serpent"
+Serpent.Parent = MainFrame
+Serpent.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Serpent.BackgroundTransparency = 1.000
+Serpent.Position = UDim2.new(0.748776555, 0, 0.464102566, 0)
+Serpent.Size = UDim2.new(0, 111, 0, 51)
+Serpent.Font = Enum.Font.SourceSans
+Serpent.Text = "Serpent"
+Serpent.TextColor3 = Color3.fromRGB(159, 109, 73)
+Serpent.TextScaled = true
+Serpent.TextSize = 14.000
+Serpent.TextWrapped = true
+
+Insect.Name = "Insect"
+Insect.Parent = MainFrame
+Insect.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Insect.BackgroundTransparency = 1.000
+Insect.Position = UDim2.new(0.0750407875, 0, 0.464102566, 0)
+Insect.Size = UDim2.new(0, 111, 0, 51)
+Insect.Font = Enum.Font.SourceSans
+Insect.Text = "Insect"
+Insect.TextColor3 = Color3.fromRGB(159, 109, 73)
+Insect.TextScaled = true
+Insect.TextSize = 14.000
+Insect.TextWrapped = true
+
+Flame.Name = "Flame"
+Flame.Parent = MainFrame
+Flame.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Flame.BackgroundTransparency = 1.000
+Flame.Position = UDim2.new(0.409461677, 0, 0.464102566, 0)
+Flame.Size = UDim2.new(0, 111, 0, 51)
+Flame.Font = Enum.Font.SourceSans
+Flame.Text = "Flame"
+Flame.TextColor3 = Color3.fromRGB(159, 109, 73)
+Flame.TextScaled = true
+Flame.TextSize = 14.000
+Flame.TextWrapped = true
+
+Beast.Name = "Beast"
+Beast.Parent = MainFrame
+Beast.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Beast.BackgroundTransparency = 1.000
+Beast.Position = UDim2.new(0.0750407875, 0, 0.594871819, 0)
+Beast.Size = UDim2.new(0, 111, 0, 51)
+Beast.Font = Enum.Font.SourceSans
+Beast.Text = "Beast"
+Beast.TextColor3 = Color3.fromRGB(159, 109, 73)
+Beast.TextScaled = true
+Beast.TextSize = 14.000
+Beast.TextWrapped = true
+
+Moon.Name = "Moon"
+Moon.Parent = MainFrame
+Moon.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Moon.BackgroundTransparency = 1.000
+Moon.Position = UDim2.new(0.409461677, 0, 0.594871819, 0)
+Moon.Size = UDim2.new(0, 111, 0, 51)
+Moon.Font = Enum.Font.SourceSans
+Moon.Text = "Moon"
+Moon.TextColor3 = Color3.fromRGB(159, 109, 73)
+Moon.TextScaled = true
+Moon.TextSize = 14.000
+Moon.TextWrapped = true
+
+Wind.Name = "Wind"
+Wind.Parent = MainFrame
+Wind.BackgroundColor3 = Color3.fromRGB(159, 109, 73)
+Wind.BackgroundTransparency = 1.000
+Wind.Position = UDim2.new(0.748776555, 0, 0.594871819, 0)
+Wind.Size = UDim2.new(0, 111, 0, 51)
+Wind.Font = Enum.Font.SourceSans
+Wind.Text = "Wind"
+Wind.TextColor3 = Color3.fromRGB(159, 109, 73)
+Wind.TextScaled = true
+Wind.TextSize = 14.000
+Wind.TextWrapped = true
+print("no")
+
+
+
+print("222no")
+--varibles
+
+print("yesbbbbbb")
+
+local TS = game:GetService("TweenService")
+local TI1 = TweenInfo.new(0.5)
+local Corn = Instance.new("UICorner", Circle)
+Corn.CornerRadius = UDim.new(0.5,0)
+
+--start of program
+Circle.AnchorPoint = Vector2.new(0,0)
+wait(1)
+local Fadeincircle = TS:Create(Circle,TI1,{BackgroundTransparency=0})
+local Fadeintext = TS:Create(TEXT,TI1,{ImageTransparency=0})
+Fadeincircle:Play()
+Fadeintext:Play()
+
+--dots loops
+for i=1,3 do
+	LoadingDots.Text = "."
+	wait(0.3)
+	LoadingDots.Text = ". ."
+	wait(0.3)
+	LoadingDots.Text = ". . ."
+	wait(0.3)
+end
+LoadingDots.Text = ""
+
+--fade out stuff now
+local Fadeouttext = TS:Create(TEXT,TI1,{ImageTransparency=1})
+Fadeouttext:Play()
+wait(1.5)
+--{0, 440},{0, 263}
+local Nomorecorners = TS:Create(Corn,TI1,{CornerRadius=UDim.new(0,0)})
+local GrowCircle = TS:Create(Circle,TI1,{Size=UDim2.new(0, 440,0, 263)})
+print(Circle.Name)
+print(LoadingDots.Name)
+GrowCircle:Play()
+Nomorecorners:Play()
+wait(0.9)
+AfterWardsFrame.Visible = true
+AfterWardsFrame.BackgroundTransparency = 0
+Circle.Visible = false
+wait(0.3)
+local player = game.Players.LocalPlayer
+local fadeGameSelectFrame1 = TS:Create(AfterWardsFrame.TopPanel,TI1,{BackgroundTransparency=0})
+local fadeGameSelectFrame2 = TS:Create(AfterWardsFrame.TopPanel.Close,TI1,{TextTransparency=0})
+local fadeGameSelectFrame3 = TS:Create(AfterWardsFrame.TopPanel.Username,TI1,{TextTransparency=0})
+local fadeGameSelectFrame4 = TS:Create(AfterWardsFrame.Start,TI1,{TextTransparency=0})
+local fadeGameSelectFrame5 = TS:Create(AfterWardsFrame.GameName,TI1,{TextTransparency=0})
+local fadeGameSelectFrame6 = TS:Create(AfterWardsFrame.GameName,TI1,{BackgroundTransparency=0})
+local fadeGameSelectFrame7 = TS:Create(AfterWardsFrame.Start,TI1,{BackgroundTransparency=0})
+
+--fade-in all of game selecter frame
+
+fadeGameSelectFrame1:Play()
+fadeGameSelectFrame2:Play()
+fadeGameSelectFrame3:Play()
+fadeGameSelectFrame4:Play()
+fadeGameSelectFrame5:Play()
+fadeGameSelectFrame6:Play()
+fadeGameSelectFrame7:Play()
+
+
+AfterWardsFrame.Draggable = true
+
+Close.MouseButton1Click:Connect(function()
+	game.Debris:AddItem(MilkyHubM,0.1)
+end)
+
+Username.Text =  "Hello ".. game.Players.LocalPlayer.Name
+
+if game.Name == "Game" then
+	GameName.Text = "Wisteria"
+else
+	GameName.Text = ""
+end
+
+
+if game.GameId ~= 1571905185 then
+	Start.Text = "Not Wisteria!"
+	
+end
+
+Close_2.MouseButton1Click:Connect(function()
+	game.Debris:AddItem(MilkyHubM,0.1)
+end)
+
+local move1 = TS:Create(Title,TI1,{Rotation=10})
+local move2 = TS:Create(Title,TI1,{Rotation=-10})
+local RS = game:GetService("RunService")
+spawn(function()
+	while true do
+		wait(0.5)
+		move1:Play()
+		wait(0.5)
+		move2:Play()
+		RS.Stepped:Wait()
+	end
+end)
+
+Start.MouseButton1Click:Connect(function()
+
+
+		print("Started!")
+
+		local fadeGameSelectFrame1 = TS:Create(AfterWardsFrame.TopPanel,TI1,{BackgroundTransparency=1})
+		local fadeGameSelectFrame2 = TS:Create(AfterWardsFrame.TopPanel.Close,TI1,{TextTransparency=1})
+		local fadeGameSelectFrame3 = TS:Create(AfterWardsFrame.TopPanel.Username,TI1,{TextTransparency=1})
+		local fadeGameSelectFrame4 = TS:Create(AfterWardsFrame.Start,TI1,{TextTransparency=1})
+		local fadeGameSelectFrame5 = TS:Create(AfterWardsFrame.GameName,TI1,{TextTransparency=1})
+		local fadeGameSelectFrame6 = TS:Create(AfterWardsFrame.GameName,TI1,{BackgroundTransparency=1})
+		local fadeGameSelectFrame7 = TS:Create(AfterWardsFrame.Start,TI1,{BackgroundTransparency=1})
+		local fadeGameSelectFrame8 = TS:Create(AfterWardsFrame,TI1,{BackgroundTransparency=1})
+
+		--fade-in all of game selecter frame
+
+		fadeGameSelectFrame1:Play()
+		fadeGameSelectFrame2:Play()
+		fadeGameSelectFrame3:Play()
+		fadeGameSelectFrame4:Play()
+		fadeGameSelectFrame5:Play()
+		fadeGameSelectFrame6:Play()
+		fadeGameSelectFrame7:Play()
+		fadeGameSelectFrame8:Play()
+		wait(1.5)
+		AfterWardsFrame.Visible = false
+		MainFrame.Visible = true
+		print("BRUH")
+	
+end)
+
+MainFrame.Draggable = true
+MainFrame.Active = true
+
+Beast.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Beast")
+end)
+
+Flame.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Flame")
+end)
+
+Water.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Water")
+end)
+
+Sound.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Sound")
+end)
+
+Mist.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Mist")
+end)
+
+Moon.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Moon")
+end)
+
+Insect.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Insect")
+end)
+
+Wind.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Wind")
+end)
+
+Love.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Love")
+end)
+
+Thunder.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Thunder")
+end)
+
+Serpent.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Serpent")
+end)
+
+Stone.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Stone")
+end)
+
