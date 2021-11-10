@@ -463,6 +463,54 @@ StartCloseTextVis:Play()
 StartMainFrame.Draggable = true
 StartMainFrame.Active = true
 
+Beast.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Beast")
+end)
+
+Flame.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Flame")
+end)
+
+Water.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Water")
+end)
+
+Sound.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Sound")
+end)
+
+Mist.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Mist")
+end)
+
+Moon.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Moon")
+end)
+
+Insect.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Insect")
+end)
+
+Wind.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Wind")
+end)
+
+Love.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Love")
+end)
+
+Thunder.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Thunder")
+end)
+
+Serpent.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Serpent")
+end)
+
+Stone.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Stone")
+end)
+
 --color
 spawn(function()
 	local colourWheel = ColourWheel
@@ -680,53 +728,7 @@ RS.Heartbeat:Connect(function()
 		game.Debris:AddItem(script,0.1)
 	end)
 		
-		Beast.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Beast")
-end)
-
-Flame.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Flame")
-end)
-
-Water.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Water")
-end)
-
-Sound.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Sound")
-end)
-
-Mist.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Mist")
-end)
-
-Moon.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Moon")
-end)
-
-Insect.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Insect")
-end)
-
-Wind.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Wind")
-end)
-
-Love.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Love")
-end)
-
-Thunder.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Thunder")
-end)
-
-Serpent.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Serpent")
-end)
-
-Stone.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Stone")
-end)
+		
 
 		
 		
