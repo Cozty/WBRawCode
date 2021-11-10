@@ -1,0 +1,736 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+if game.CoreGui:FindFirstChild("WisteriaBreaths") then
+	game.CoreGui:FindFirstChild("WisteriaBreaths"):Destroy()
+end
+
+local WisteriaBreaths = Instance.new("ScreenGui")
+local StartMainFrame = Instance.new("Frame")
+local StartTopPanel = Instance.new("Frame")
+local StartClose = Instance.new("TextButton")
+local StartTitle = Instance.new("TextLabel")
+local StartButton = Instance.new("TextButton")
+local MainFrame = Instance.new("Frame")
+local TopPanelMain = Instance.new("Frame")
+local MainClose = Instance.new("TextButton")
+local MainTitle = Instance.new("TextLabel")
+local Settings = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Beast = Instance.new("TextButton")
+local Flame = Instance.new("TextButton")
+local Love = Instance.new("TextButton")
+local Insect = Instance.new("TextButton")
+local Mist = Instance.new("TextButton")
+local Moon = Instance.new("TextButton")
+local Sound = Instance.new("TextButton")
+local Serpent = Instance.new("TextButton")
+local Water = Instance.new("TextButton")
+local Stone = Instance.new("TextButton")
+local Thunder = Instance.new("TextButton")
+local Wind = Instance.new("TextButton")
+local ColorPickerFrame = Instance.new("Frame")
+local DarknessPicker = Instance.new("ImageButton")
+local UIGradient = Instance.new("UIGradient")
+local Slider = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local ColourWheel = Instance.new("ImageButton")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local Picker = Instance.new("ImageLabel")
+local ColorTopPanel = Instance.new("Frame")
+local ColorClose = Instance.new("TextButton")
+local ColorTitle = Instance.new("TextLabel")
+
+--Properties:
+
+WisteriaBreaths.Name = "WisteriaBreaths"
+WisteriaBreaths.Parent = game.CoreGui
+WisteriaBreaths.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+StartMainFrame.Name = "StartMainFrame"
+StartMainFrame.Parent = WisteriaBreaths
+StartMainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+StartMainFrame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+StartMainFrame.BackgroundTransparency = 1.000
+StartMainFrame.BorderSizePixel = 0
+StartMainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+StartMainFrame.Size = UDim2.new(0, 391, 0, 142)
+
+StartTopPanel.Name = "StartTopPanel"
+StartTopPanel.Parent = StartMainFrame
+StartTopPanel.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+StartTopPanel.BackgroundTransparency = 1.000
+StartTopPanel.BorderSizePixel = 0
+StartTopPanel.Size = UDim2.new(0, 391, 0, 32)
+
+StartClose.Name = "StartClose"
+StartClose.Parent = StartTopPanel
+StartClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StartClose.BackgroundTransparency = 1.000
+StartClose.Position = UDim2.new(0.925831199, 0, 0, 0)
+StartClose.Size = UDim2.new(0, 29, 0, 32)
+StartClose.Font = Enum.Font.SourceSansBold
+StartClose.Text = "X"
+StartClose.TextColor3 = Color3.fromRGB(121, 182, 255)
+StartClose.TextScaled = true
+StartClose.TextSize = 14.000
+StartClose.TextTransparency = 1.000
+StartClose.TextWrapped = true
+
+StartTitle.Name = "StartTitle"
+StartTitle.Parent = StartTopPanel
+StartTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StartTitle.BackgroundTransparency = 1.000
+StartTitle.Size = UDim2.new(0, 200, 0, 32)
+StartTitle.Font = Enum.Font.SourceSansBold
+StartTitle.Text = "Wisteria Breathing Selector"
+StartTitle.TextColor3 = Color3.fromRGB(121, 182, 255)
+StartTitle.TextScaled = true
+StartTitle.TextSize = 14.000
+StartTitle.TextTransparency = 1.000
+StartTitle.TextWrapped = true
+
+StartButton.Name = "StartButton"
+StartButton.Parent = StartMainFrame
+StartButton.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+StartButton.BackgroundTransparency = 1.000
+StartButton.BorderSizePixel = 0
+StartButton.Position = UDim2.new(0.242966756, 0, 0.408450723, 0)
+StartButton.Size = UDim2.new(0, 200, 0, 50)
+StartButton.Font = Enum.Font.SourceSansSemibold
+StartButton.Text = "Start!"
+StartButton.TextColor3 = Color3.fromRGB(121, 182, 255)
+StartButton.TextScaled = true
+StartButton.TextSize = 14.000
+StartButton.TextTransparency = 1.000
+StartButton.TextWrapped = true
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = WisteriaBreaths
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.5, 0, 0.584425032, 0)
+MainFrame.Size = UDim2.new(0, 405, 0, 281)
+MainFrame.Visible = false
+
+TopPanelMain.Name = "TopPanelMain"
+TopPanelMain.Parent = MainFrame
+TopPanelMain.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+TopPanelMain.BorderSizePixel = 0
+TopPanelMain.Size = UDim2.new(0, 405, 0, 33)
+
+MainClose.Name = "MainClose"
+MainClose.Parent = TopPanelMain
+MainClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainClose.BackgroundTransparency = 1.000
+MainClose.Position = UDim2.new(0.913580239, 0, 0, 0)
+MainClose.Size = UDim2.new(0, 35, 0, 33)
+MainClose.Font = Enum.Font.SourceSansSemibold
+MainClose.Text = "X"
+MainClose.TextColor3 = Color3.fromRGB(121, 182, 255)
+MainClose.TextScaled = true
+MainClose.TextSize = 14.000
+MainClose.TextWrapped = true
+
+MainTitle.Name = "MainTitle"
+MainTitle.Parent = TopPanelMain
+MainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainTitle.BackgroundTransparency = 1.000
+MainTitle.Position = UDim2.new(-0.0592592582, 0, 0, 0)
+MainTitle.Size = UDim2.new(0, 200, 0, 33)
+MainTitle.Font = Enum.Font.SourceSansSemibold
+MainTitle.Text = "Breathings!"
+MainTitle.TextColor3 = Color3.fromRGB(121, 182, 255)
+MainTitle.TextScaled = true
+MainTitle.TextSize = 14.000
+MainTitle.TextWrapped = true
+
+Settings.Name = "Settings"
+Settings.Parent = TopPanelMain
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.Position = UDim2.new(0.812345624, 0, 0, 0)
+Settings.Size = UDim2.new(0, 30, 0, 33)
+Settings.Font = Enum.Font.SourceSans
+Settings.Text = "?"
+Settings.TextColor3 = Color3.fromRGB(121, 182, 255)
+Settings.TextScaled = true
+Settings.TextSize = 14.000
+Settings.TextWrapped = true
+
+ScrollingFrame.Parent = MainFrame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(121, 182, 255)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.111111112, 0, 0.175196752, 0)
+ScrollingFrame.Size = UDim2.new(0, 314, 0, 214)
+ScrollingFrame.Name = "FrameForBreaths"
+
+Beast.Name = "Beast"
+Beast.Parent = ScrollingFrame
+Beast.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Beast.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Beast.BorderSizePixel = 0
+Beast.Position = UDim2.new(0.0350318551, 0, 0.0288493447, 0)
+Beast.Size = UDim2.new(0, 120, 0, 30)
+Beast.Font = Enum.Font.SourceSans
+Beast.Text = "Beast"
+Beast.TextColor3 = Color3.fromRGB(121, 182, 255)
+Beast.TextScaled = true
+Beast.TextSize = 14.000
+Beast.TextWrapped = true
+
+Flame.Name = "Flame"
+Flame.Parent = ScrollingFrame
+Flame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Flame.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Flame.BorderSizePixel = 0
+Flame.Position = UDim2.new(0.506369472, 0, 0.0288493447, 0)
+Flame.Size = UDim2.new(0, 120, 0, 30)
+Flame.Font = Enum.Font.SourceSans
+Flame.Text = "Flame"
+Flame.TextColor3 = Color3.fromRGB(121, 182, 255)
+Flame.TextScaled = true
+Flame.TextSize = 14.000
+Flame.TextWrapped = true
+
+Love.Name = "Love"
+Love.Parent = ScrollingFrame
+Love.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Love.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Love.BorderSizePixel = 0
+Love.Position = UDim2.new(0.506369472, 0, 0.0929062814, 0)
+Love.Size = UDim2.new(0, 120, 0, 30)
+Love.Font = Enum.Font.SourceSans
+Love.Text = "Love"
+Love.TextColor3 = Color3.fromRGB(121, 182, 255)
+Love.TextScaled = true
+Love.TextSize = 14.000
+Love.TextWrapped = true
+
+Insect.Name = "Insect"
+Insect.Parent = ScrollingFrame
+Insect.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Insect.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Insect.BorderSizePixel = 0
+Insect.Position = UDim2.new(0.0350318551, 0, 0.0929062814, 0)
+Insect.Size = UDim2.new(0, 120, 0, 30)
+Insect.Font = Enum.Font.SourceSans
+Insect.Text = "Insect"
+Insect.TextColor3 = Color3.fromRGB(121, 182, 255)
+Insect.TextScaled = true
+Insect.TextSize = 14.000
+Insect.TextWrapped = true
+
+Mist.Name = "Mist"
+Mist.Parent = ScrollingFrame
+Mist.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Mist.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Mist.BorderSizePixel = 0
+Mist.Position = UDim2.new(0.0350318551, 0, 0.158742592, 0)
+Mist.Size = UDim2.new(0, 120, 0, 30)
+Mist.Font = Enum.Font.SourceSans
+Mist.Text = "Mist"
+Mist.TextColor3 = Color3.fromRGB(121, 182, 255)
+Mist.TextScaled = true
+Mist.TextSize = 14.000
+Mist.TextWrapped = true
+
+Moon.Name = "Moon"
+Moon.Parent = ScrollingFrame
+Moon.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Moon.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Moon.BorderSizePixel = 0
+Moon.Position = UDim2.new(0.506369472, 0, 0.158742592, 0)
+Moon.Size = UDim2.new(0, 120, 0, 30)
+Moon.Font = Enum.Font.SourceSans
+Moon.Text = "Moon"
+Moon.TextColor3 = Color3.fromRGB(121, 182, 255)
+Moon.TextScaled = true
+Moon.TextSize = 14.000
+Moon.TextWrapped = true
+
+Sound.Name = "Sound"
+Sound.Parent = ScrollingFrame
+Sound.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Sound.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Sound.BorderSizePixel = 0
+Sound.Position = UDim2.new(0.506369472, 0, 0.222799525, 0)
+Sound.Size = UDim2.new(0, 120, 0, 30)
+Sound.Font = Enum.Font.SourceSans
+Sound.Text = "Sound"
+Sound.TextColor3 = Color3.fromRGB(121, 182, 255)
+Sound.TextScaled = true
+Sound.TextSize = 14.000
+Sound.TextWrapped = true
+
+Serpent.Name = "Serpent"
+Serpent.Parent = ScrollingFrame
+Serpent.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Serpent.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Serpent.BorderSizePixel = 0
+Serpent.Position = UDim2.new(0.0350318551, 0, 0.222799525, 0)
+Serpent.Size = UDim2.new(0, 120, 0, 30)
+Serpent.Font = Enum.Font.SourceSans
+Serpent.Text = "Serpent"
+Serpent.TextColor3 = Color3.fromRGB(121, 182, 255)
+Serpent.TextScaled = true
+Serpent.TextSize = 14.000
+Serpent.TextWrapped = true
+
+Water.Name = "Water"
+Water.Parent = ScrollingFrame
+Water.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Water.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Water.BorderSizePixel = 0
+Water.Position = UDim2.new(0.0350318551, 0, 0.354472101, 0)
+Water.Size = UDim2.new(0, 120, 0, 30)
+Water.Font = Enum.Font.SourceSans
+Water.Text = "Water"
+Water.TextColor3 = Color3.fromRGB(121, 182, 255)
+Water.TextScaled = true
+Water.TextSize = 14.000
+Water.TextWrapped = true
+
+Stone.Name = "Stone"
+Stone.Parent = ScrollingFrame
+Stone.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Stone.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Stone.BorderSizePixel = 0
+Stone.Position = UDim2.new(0.0350318551, 0, 0.290415168, 0)
+Stone.Size = UDim2.new(0, 120, 0, 30)
+Stone.Font = Enum.Font.SourceSans
+Stone.Text = "Stone"
+Stone.TextColor3 = Color3.fromRGB(121, 182, 255)
+Stone.TextScaled = true
+Stone.TextSize = 14.000
+Stone.TextWrapped = true
+
+Thunder.Name = "Thunder"
+Thunder.Parent = ScrollingFrame
+Thunder.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Thunder.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Thunder.BorderSizePixel = 0
+Thunder.Position = UDim2.new(0.506369472, 0, 0.290415168, 0)
+Thunder.Size = UDim2.new(0, 120, 0, 30)
+Thunder.Font = Enum.Font.SourceSans
+Thunder.Text = "Thunder"
+Thunder.TextColor3 = Color3.fromRGB(121, 182, 255)
+Thunder.TextScaled = true
+Thunder.TextSize = 14.000
+Thunder.TextWrapped = true
+
+Wind.Name = "Wind"
+Wind.Parent = ScrollingFrame
+Wind.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Wind.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Wind.BorderSizePixel = 0
+Wind.Position = UDim2.new(0.506369472, 0, 0.354472101, 0)
+Wind.Size = UDim2.new(0, 120, 0, 30)
+Wind.Font = Enum.Font.SourceSans
+Wind.Text = "Wind"
+Wind.TextColor3 = Color3.fromRGB(121, 182, 255)
+Wind.TextScaled = true
+Wind.TextSize = 14.000
+Wind.TextWrapped = true
+
+ColorPickerFrame.Name = "ColorPickerFrame"
+ColorPickerFrame.Parent = WisteriaBreaths
+ColorPickerFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+ColorPickerFrame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+ColorPickerFrame.BorderSizePixel = 0
+ColorPickerFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+ColorPickerFrame.Size = UDim2.new(0, 354, 0, 272)
+ColorPickerFrame.Visible = false
+
+DarknessPicker.Name = "DarknessPicker"
+DarknessPicker.Parent = ColorPickerFrame
+DarknessPicker.Active = false
+DarknessPicker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DarknessPicker.BackgroundTransparency = 1.000
+DarknessPicker.BorderSizePixel = 0
+DarknessPicker.Position = UDim2.new(0.849165916, 0, 0.153101146, 0)
+DarknessPicker.Selectable = false
+DarknessPicker.Size = UDim2.new(0.0889911577, 0, 0.735876799, 0)
+DarknessPicker.ZIndex = 2
+DarknessPicker.Image = "rbxassetid://3570695787"
+DarknessPicker.ScaleType = Enum.ScaleType.Slice
+DarknessPicker.SliceCenter = Rect.new(100, 100, 100, 100)
+DarknessPicker.SliceScale = 0.120
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient.Rotation = 90
+UIGradient.Parent = DarknessPicker
+
+Slider.Name = "Slider"
+Slider.Parent = DarknessPicker
+Slider.AnchorPoint = Vector2.new(0.5, 0.5)
+Slider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Slider.BackgroundTransparency = 1.000
+Slider.BorderSizePixel = 0
+Slider.Position = UDim2.new(0.491197795, 0, 0.0733607039, 0)
+Slider.Size = UDim2.new(1.28656352, 0, 0.0265010502, 0)
+Slider.ZIndex = 2
+Slider.Image = "rbxassetid://3570695787"
+Slider.ImageColor3 = Color3.fromRGB(255, 74, 74)
+Slider.ScaleType = Enum.ScaleType.Slice
+Slider.SliceCenter = Rect.new(100, 100, 100, 100)
+Slider.SliceScale = 0.120
+
+UIAspectRatioConstraint.Parent = DarknessPicker
+UIAspectRatioConstraint.AspectRatio = 0.157
+
+ColourWheel.Name = "ColourWheel"
+ColourWheel.Parent = ColorPickerFrame
+ColourWheel.Active = false
+ColourWheel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColourWheel.BackgroundTransparency = 1.000
+ColourWheel.BorderSizePixel = 0
+ColourWheel.Position = UDim2.new(0.0293772239, 0, 0.23438555, 0)
+ColourWheel.Selectable = false
+ColourWheel.Size = UDim2.new(0.500571847, 0, 0.651479661, 0)
+ColourWheel.Image = "http://www.roblox.com/asset/?id=6020299385"
+
+UIAspectRatioConstraint_2.Parent = ColourWheel
+UIAspectRatioConstraint_2.AspectRatio = 1.000
+
+Picker.Name = "Picker"
+Picker.Parent = ColourWheel
+Picker.AnchorPoint = Vector2.new(0.5, 0.5)
+Picker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Picker.BackgroundTransparency = 1.000
+Picker.BorderSizePixel = 0
+Picker.Position = UDim2.new(0.5, 0, 0.5, 0)
+Picker.Size = UDim2.new(0.0900257826, 0, 0.0900257975, 0)
+Picker.Image = "http://www.roblox.com/asset/?id=3678860011"
+
+ColorTopPanel.Name = "ColorTopPanel"
+ColorTopPanel.Parent = ColorPickerFrame
+ColorTopPanel.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+ColorTopPanel.BorderSizePixel = 0
+ColorTopPanel.Size = UDim2.new(0, 354, 0, 35)
+
+ColorClose.Name = "ColorClose"
+ColorClose.Parent = ColorTopPanel
+ColorClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorClose.BackgroundTransparency = 1.000
+ColorClose.Position = UDim2.new(0.892655373, 0, 0, 0)
+ColorClose.Size = UDim2.new(0, 38, 0, 35)
+ColorClose.Font = Enum.Font.SourceSansSemibold
+ColorClose.Text = "X"
+ColorClose.TextColor3 = Color3.fromRGB(121, 182, 255)
+ColorClose.TextScaled = true
+ColorClose.TextSize = 14.000
+ColorClose.TextWrapped = true
+
+ColorTitle.Name = "ColorTitle"
+ColorTitle.Parent = ColorTopPanel
+ColorTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorTitle.BackgroundTransparency = 1.000
+ColorTitle.Position = UDim2.new(0.0282485876, 0, 0, 0)
+ColorTitle.Size = UDim2.new(0, 72, 0, 35)
+ColorTitle.Font = Enum.Font.SourceSans
+ColorTitle.Text = "Color!"
+ColorTitle.TextColor3 = Color3.fromRGB(121, 182, 255)
+ColorTitle.TextScaled = true
+ColorTitle.TextSize = 14.000
+ColorTitle.TextWrapped = true
+wait(1)
+local player = game.Players
+local TS = game:GetService("TweenService")
+local RS = game:GetService("RunService")
+local TI1 = TweenInfo.new(1)
+local TI2 = TweenInfo.new(.5)
+--time to actually start this.
+local StartFrameVis = TS:Create(StartMainFrame,TI1,{BackgroundTransparency=0})
+local StartTopPanelVis = TS:Create(StartTopPanel,TI1,{BackgroundTransparency=0})
+local StartButtonVis = TS:Create(StartButton,TI1,{BackgroundTransparency=0})
+local StartTextButtonVis = TS:Create(StartButton,TI1,{TextTransparency=0})
+local StartTitleButtonVis = TS:Create(StartTitle,TI1,{TextTransparency=0})
+local StartCloseTextVis = TS:Create(StartClose,TI1,{TextTransparency=0})
+local started = false
+print("bruh")
+StartTopPanelVis:Play()
+StartFrameVis:Play()
+StartButtonVis:Play()
+StartTextButtonVis:Play()
+StartTitleButtonVis:Play()
+StartCloseTextVis:Play()
+
+StartMainFrame.Draggable = true
+StartMainFrame.Active = true
+
+--color
+spawn(function()
+	local colourWheel = ColourWheel
+	local wheelPicker = Picker
+
+	local darknessPicker = DarknessPicker
+	local darknessSlider = Slider
+
+	
+
+
+	local uis = game:GetService("UserInputService")
+
+
+	local buttonDown = false
+	local movingSlider = false
+
+
+	local function updateColour(centreOfWheel)
+
+
+		local colourPickerCentre = Vector2.new(
+			colourWheel.Picker.AbsolutePosition.X + (colourWheel.Picker.AbsoluteSize.X/2),
+			colourWheel.Picker.AbsolutePosition.Y + (colourWheel.Picker.AbsoluteSize.Y/2)
+		)
+		local h = (math.pi - math.atan2(colourPickerCentre.Y - centreOfWheel.Y, colourPickerCentre.X - centreOfWheel.X)) / (math.pi * 2)
+
+		local s = (centreOfWheel - colourPickerCentre).Magnitude / (colourWheel.AbsoluteSize.X/2)
+
+		local v = math.abs((darknessSlider.AbsolutePosition.Y - darknessPicker.AbsolutePosition.Y) / darknessPicker.AbsoluteSize.Y - 1)
+
+
+		local hsv = Color3.fromHSV(math.clamp(h, 0, 1), math.clamp(s, 0, 1), math.clamp(v, 0, 1))
+
+
+		Beast.TextColor3 = hsv
+		Wind.TextColor3 = hsv
+		Moon.TextColor3 = hsv
+		Water.TextColor3 = hsv
+		Flame.TextColor3 = hsv
+		Sound.TextColor3 = hsv
+		Love.TextColor3 = hsv
+		Serpent.TextColor3 = hsv
+		Mist.TextColor3 = hsv
+		Insect.TextColor3 = hsv
+		Stone.TextColor3 = hsv
+		Thunder.TextColor3 = hsv
+		ColorClose.TextColor3 = hsv
+		ColorTitle.TextColor3 = hsv
+		MainTitle.TextColor3 = hsv
+		MainClose.TextColor3 = hsv
+		Settings.TextColor3 = hsv
+		darknessPicker.UIGradient.Color = ColorSequence.new{
+			ColorSequenceKeypoint.new(0, hsv), 
+			ColorSequenceKeypoint.new(1, Color3.new(0, 0, 0))
+		}
+	end
+
+
+	colourWheel.MouseButton1Down:Connect(function()
+		buttonDown = true
+	end)
+
+	darknessPicker.MouseButton1Down:Connect(function()
+		movingSlider = true
+	end)
+
+
+	uis.InputEnded:Connect(function(input)
+
+		if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
+
+		buttonDown = false
+		movingSlider = false
+	end)
+
+
+	uis.InputChanged:Connect(function(input)
+
+		if input.UserInputType ~= Enum.UserInputType.MouseMovement then return end
+
+
+		local mousePos = uis:GetMouseLocation() - Vector2.new(0, game:GetService("GuiService"):GetGuiInset().Y)
+
+		local centreOfWheel = Vector2.new(colourWheel.AbsolutePosition.X + (colourWheel.AbsoluteSize.X/2), colourWheel.AbsolutePosition.Y + (colourWheel.AbsoluteSize.Y/2))
+
+		local distanceFromWheel = (mousePos - centreOfWheel).Magnitude
+
+
+		if distanceFromWheel <= colourWheel.AbsoluteSize.X/2 and buttonDown then
+
+			wheelPicker.Position = UDim2.new(0, mousePos.X - colourWheel.AbsolutePosition.X, 0, mousePos.Y - colourWheel.AbsolutePosition.Y)
+
+
+		elseif movingSlider then
+
+			darknessSlider.Position = UDim2.new(darknessSlider.Position.X.Scale, 0, 0, 
+				math.clamp(
+					mousePos.Y - darknessPicker.AbsolutePosition.Y, 
+					0, 
+					darknessPicker.AbsoluteSize.Y)
+			)	
+		end
+
+
+		updateColour(centreOfWheel)
+	end)
+end)
+
+
+local DarkBlue = TS:Create(StartButton,TI2, {TextColor3=Color3.fromRGB(75, 114, 159)})
+local BabyBlue = TS:Create(StartButton,TI2, {TextColor3=Color3.fromRGB(121, 182, 255)})
+
+spawn(function()
+	while true do
+		wait(.5)
+		DarkBlue:Play()
+		wait(.5)
+		BabyBlue:Play()
+		RS.Stepped:Wait()
+	end
+end)
+
+StartClose.MouseButton1Click:Connect(function()
+	local StartFrameInVis = TS:Create(StartMainFrame,TI1,{BackgroundTransparency=1})
+	local StartTopPanelInVis = TS:Create(StartTopPanel,TI1,{BackgroundTransparency=1})
+	local StartButtonInVis = TS:Create(StartButton,TI1,{BackgroundTransparency=1})
+	local StartTextButtonInVis = TS:Create(StartButton,TI1,{TextTransparency=1})
+	local StartTitleButtonInVis = TS:Create(StartTitle,TI1,{TextTransparency=1})
+	local StartCloseTextInVis = TS:Create(StartClose,TI1,{TextTransparency=1})
+	StartTopPanelInVis:Play()
+	StartFrameInVis:Play()
+	StartButtonInVis:Play()
+	StartTextButtonInVis:Play()
+	StartTitleButtonInVis:Play()
+	StartCloseTextInVis:Play()
+	wait(1.2)
+	game.Debris:AddItem(WisteriaBreaths,0.1)
+end)
+
+StartButton.MouseButton1Click:Connect(function()
+	local StartFrameInVis = TS:Create(StartMainFrame,TI1,{BackgroundTransparency=1})
+	local StartTopPanelInVis = TS:Create(StartTopPanel,TI1,{BackgroundTransparency=1})
+	local StartButtonInVis = TS:Create(StartButton,TI1,{BackgroundTransparency=1})
+	local StartTextButtonInVis = TS:Create(StartButton,TI1,{TextTransparency=1})
+	local StartTitleButtonInVis = TS:Create(StartTitle,TI1,{TextTransparency=1})
+	local StartCloseTextInVis = TS:Create(StartClose,TI1,{TextTransparency=1})
+	StartTopPanelInVis:Play()
+	StartFrameInVis:Play()
+	StartButtonInVis:Play()
+	StartTextButtonInVis:Play()
+	StartTitleButtonInVis:Play()
+	StartCloseTextInVis:Play()
+	wait(1.5)
+	MainFrame.Visible = true
+	started = true
+end)
+
+MainFrame.Draggable = true
+MainFrame.Active = true
+
+MainFrame.BackgroundTransparency = 1
+TopPanelMain.BackgroundTransparency = 1
+ScrollingFrame.BackgroundTransparency = 1
+ScrollingFrame.ScrollBarImageTransparency = 1
+for i,v in ipairs(MainFrame:GetChildren()) do
+	if v.ClassName == "Frame" or v.ClassName == "ScrollingFrame" then
+
+		for i,g in ipairs(v:GetChildren()) do
+			if g.ClassName == "TextButton" or g.ClassName == "TextLabel" then
+				g.TextTransparency=1
+				g.BackgroundTransparency=1
+			end
+		end
+	end
+end
+
+RS.Heartbeat:Connect(function()
+	if started == true then
+		
+	wait(1)
+	local FadeIn1 = TS:Create(MainFrame,TI1,{BackgroundTransparency=0})
+	FadeIn1:Play()
+
+	for i,v in ipairs(MainFrame:GetChildren()) do
+	if v.ClassName == "Frame" or v.ClassName == "ScrollingFrame" then
+				local FadeIn = TS:Create(v,TI1, {BackgroundTransparency=0})
+				
+		FadeIn:Play()
+		for i,g in ipairs(v:GetChildren()) do
+					if g.ClassName == "TextButton" or g.ClassName == "TextLabel" then
+						local FadeIn2 = TS:Create(g,TI1,{TextTransparency=0},{BackgroundTransparency=0})
+						FadeIn2:Play()
+				
+			end
+		end
+	end
+	end
+		
+	ColorPickerFrame.Draggable = true
+	ColorPickerFrame.Active = true
+		
+	ColorClose.MouseButton1Click:connect(function()
+		ColorPickerFrame.Visible = false
+	end)
+		
+	Settings.MouseButton1Click:connect(function()
+		ColorPickerFrame.Visible = true
+		--color wheel stuff
+		
+	end)
+		
+	MainClose.MouseButton1Click:Connect(function()
+		game.Debris:AddItem(WisteriaBreaths,0.1)
+		game.Debris:AddItem(script,0.1)
+	end)
+		
+		Beast.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Beast")
+end)
+
+Flame.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Flame")
+end)
+
+Water.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Water")
+end)
+
+Sound.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Sound")
+end)
+
+Mist.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Mist")
+end)
+
+Moon.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Moon")
+end)
+
+Insect.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Insect")
+end)
+
+Wind.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Wind")
+end)
+
+Love.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Love")
+end)
+
+Thunder.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Thunder")
+end)
+
+Serpent.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Serpent")
+end)
+
+Stone.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Stone")
+end)
+
+		
+		
+		
+	end
+	
+end)
