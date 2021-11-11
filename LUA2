@@ -1,7 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
 if game.CoreGui:FindFirstChild("WisteriaBreaths") then
 	game.CoreGui:FindFirstChild("WisteriaBreaths"):Destroy()
 end
@@ -17,6 +13,7 @@ local TopPanelMain = Instance.new("Frame")
 local MainClose = Instance.new("TextButton")
 local MainTitle = Instance.new("TextLabel")
 local Settings = Instance.new("TextButton")
+local Reset = Instance.new("TextButton")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local Beast = Instance.new("TextButton")
 local Flame = Instance.new("TextButton")
@@ -160,6 +157,19 @@ Settings.TextScaled = true
 Settings.TextSize = 14.000
 Settings.TextWrapped = true
 
+Reset.Name = "Reset"
+Reset.Parent = TopPanelMain
+Reset.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reset.BackgroundTransparency = 1.000
+Reset.Position = UDim2.new(0.65925926, 0, 0, 0)
+Reset.Size = UDim2.new(0, 47, 0, 33)
+Reset.Font = Enum.Font.SourceSansSemibold
+Reset.Text = "Reset"
+Reset.TextColor3 = Color3.fromRGB(121, 182, 255)
+Reset.TextScaled = true
+Reset.TextSize = 14.000
+Reset.TextWrapped = true
+
 ScrollingFrame.Parent = MainFrame
 ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
@@ -167,7 +177,6 @@ ScrollingFrame.BorderColor3 = Color3.fromRGB(121, 182, 255)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(0.111111112, 0, 0.175196752, 0)
 ScrollingFrame.Size = UDim2.new(0, 314, 0, 214)
-ScrollingFrame.Name = "FrameForBreaths"
 
 Beast.Name = "Beast"
 Beast.Parent = ScrollingFrame
@@ -438,6 +447,7 @@ ColorTitle.TextColor3 = Color3.fromRGB(121, 182, 255)
 ColorTitle.TextScaled = true
 ColorTitle.TextSize = 14.000
 ColorTitle.TextWrapped = true
+
 wait(1)
 local player = game.Players
 local TS = game:GetService("TweenService")
@@ -463,54 +473,6 @@ StartCloseTextVis:Play()
 StartMainFrame.Draggable = true
 StartMainFrame.Active = true
 
-Beast.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Beast")
-end)
-
-Flame.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Flame")
-end)
-
-Water.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Water")
-end)
-
-Sound.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Sound")
-end)
-
-Mist.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Mist")
-end)
-
-Moon.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Moon")
-end)
-
-Insect.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Insect")
-end)
-
-Wind.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Wind")
-end)
-
-Love.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Love")
-end)
-
-Thunder.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Thunder")
-end)
-
-Serpent.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Serpent")
-end)
-
-Stone.MouseButton1Click:connect(function()
-	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Stone")
-end)
-
 --color
 spawn(function()
 	local colourWheel = ColourWheel
@@ -519,7 +481,7 @@ spawn(function()
 	local darknessPicker = DarknessPicker
 	local darknessSlider = Slider
 
-	
+
 
 
 	local uis = game:GetService("UserInputService")
@@ -562,6 +524,7 @@ spawn(function()
 		ColorTitle.TextColor3 = hsv
 		MainTitle.TextColor3 = hsv
 		MainClose.TextColor3 = hsv
+		Reset.TextColor3 = hsv
 		Settings.TextColor3 = hsv
 		darknessPicker.UIGradient.Color = ColorSequence.new{
 			ColorSequenceKeypoint.new(0, hsv), 
@@ -690,49 +653,132 @@ end
 
 RS.Heartbeat:Connect(function()
 	if started == true then
-		
-	wait(1)
-	local FadeIn1 = TS:Create(MainFrame,TI1,{BackgroundTransparency=0})
-	FadeIn1:Play()
 
-	for i,v in ipairs(MainFrame:GetChildren()) do
-	if v.ClassName == "Frame" or v.ClassName == "ScrollingFrame" then
+		wait(1)
+		local FadeIn1 = TS:Create(MainFrame,TI1,{BackgroundTransparency=0})
+		FadeIn1:Play()
+
+		for i,v in ipairs(MainFrame:GetChildren()) do
+			if v.ClassName == "Frame" or v.ClassName == "ScrollingFrame" then
 				local FadeIn = TS:Create(v,TI1, {BackgroundTransparency=0})
-				
-		FadeIn:Play()
-		for i,g in ipairs(v:GetChildren()) do
+
+				FadeIn:Play()
+				for i,g in ipairs(v:GetChildren()) do
 					if g.ClassName == "TextButton" or g.ClassName == "TextLabel" then
 						local FadeIn2 = TS:Create(g,TI1,{TextTransparency=0},{BackgroundTransparency=0})
 						FadeIn2:Play()
-				
+
+					end
+				end
 			end
 		end
-	end
-	end
-		
-	ColorPickerFrame.Draggable = true
-	ColorPickerFrame.Active = true
-		
-	ColorClose.MouseButton1Click:connect(function()
-		ColorPickerFrame.Visible = false
-	end)
-		
-	Settings.MouseButton1Click:connect(function()
-		ColorPickerFrame.Visible = true
-		--color wheel stuff
-		
-	end)
-		
-	MainClose.MouseButton1Click:Connect(function()
-		game.Debris:AddItem(WisteriaBreaths,0.1)
-		game.Debris:AddItem(script,0.1)
-	end)
-		
-		
 
+		ColorPickerFrame.Draggable = true
+		ColorPickerFrame.Active = true
+
+		ColorClose.MouseButton1Click:connect(function()
+			ColorPickerFrame.Visible = false
+		end)
+
+		Settings.MouseButton1Click:connect(function()
+			ColorPickerFrame.Visible = true
+			--color wheel stuff
+
+		end)
 		
 		
 		
+		
+		
+		MainClose.MouseButton1Click:Connect(function()
+			game.Debris:AddItem(WisteriaBreaths,0.1)
+			game.Debris:AddItem(script,0.1)
+		end)
+
+		Beast.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Beast")
+			Beast.Text = "Checked"
+		end)
+
+		Flame.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Flame")
+			Flame.Text = "Checked"
+
+		end)
+
+		Water.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Water")
+			Water.Text = "Checked!"
+
+		end)
+
+		Sound.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Sound")
+			Sound.Text = "Checked!"
+
+		end)
+
+		Mist.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Mist")
+			Mist.Text = "Checked!"
+
+		end)
+
+		Moon.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Moon")
+			Moon.Text = "Checked!"
+
+		end)
+
+		Insect.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Insect")
+			Insect.Text = "Checked!"
+
+		end)
+
+		Wind.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Wind")
+			Wind.Text = "Checked!"
+
+		end)
+
+		Love.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Love")
+			Love.Text = "Checked!"
+		end)
+
+		Thunder.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Thunder")
+			Thunder.Text = "Checked!"
+		end)
+
+		Serpent.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Serpent")
+			Serpent.Text = "Checked!"
+		end)
+
+		Stone.MouseButton1Click:connect(function()
+			game:GetService("ReplicatedStorage").BattleNPC:FireServer("Stone")
+			Stone.Text = "Checked!"
+		end)
+		
+		Reset.MouseButton1Click:Connect(function()
+			Stone.Text = "Stone"
+			Wind.Text = "Wind"
+			Serpent.Text = "Serpent"
+			Love.Text = "Love"
+			Moon.Text = "Moon"
+			Sound.Text = "Sound"
+			Flame.Text = "Flame"
+			Water.Text = "Water"
+			Insect.Text = "Insect"
+			Beast.Text = "Beast"
+			Mist.Text = "Mist"
+			Thunder.Text = "Thunder"
+		end)
+
+
+
 	end
-	
+
 end)
