@@ -1,7 +1,6 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
+if game.CoreGui:FindFirstChild("WisteriaBreaths") then
+	game.CoreGui:FindFirstChild("WisteriaBreaths"):Destroy()
+end
 
 local MilkyHubM = Instance.new("ScreenGui")
 local LoadingDots = Instance.new("TextLabel")
@@ -14,9 +13,10 @@ local Close = Instance.new("TextButton")
 local GameName = Instance.new("TextLabel")
 local Start = Instance.new("TextButton")
 local MainFrame = Instance.new("Frame")
-local TopPanel_2 = Instance.new("Frame")
+local TopPanel2 = Instance.new("Frame")
 local Close_2 = Instance.new("TextButton")
 local Title = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
 local Water = Instance.new("TextButton")
 local Thunder = Instance.new("TextButton")
 local Love = Instance.new("TextButton")
@@ -30,12 +30,11 @@ local Beast = Instance.new("TextButton")
 local Moon = Instance.new("TextButton")
 local Wind = Instance.new("TextButton")
 
-
 --Properties:
+
 MilkyHubM.Name = "MilkyHubM"
 MilkyHubM.Parent = game.CoreGui
 MilkyHubM.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-print("yes")
 
 LoadingDots.Name = "LoadingDots"
 LoadingDots.Parent = MilkyHubM
@@ -61,7 +60,6 @@ Circle.ClipsDescendants = true
 Circle.Position = UDim2.new(0.426402211, 0, 0.337991834, 0)
 Circle.Size = UDim2.new(0, 222, 0, 222)
 
-print("work??")
 TEXT.Name = "TEXT"
 TEXT.Parent = Circle
 TEXT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -69,7 +67,7 @@ TEXT.BackgroundTransparency = 1.000
 TEXT.BorderSizePixel = 0
 TEXT.Position = UDim2.new(-0.0315315314, 0, -0.0360359028, 0)
 TEXT.Size = UDim2.new(0, 236, 0, 236)
-TEXT.Image = "http://www.roblox.com/asset/?id=7860077674"
+TEXT.Image = "http://www.roblox.com/asset/?id=6770072504"
 TEXT.ImageTransparency = 1.000
 
 AfterWardsFrame.Name = "AfterWardsFrame"
@@ -160,17 +158,17 @@ MainFrame.BorderColor3 = Color3.fromRGB(159, 109, 73)
 MainFrame.BorderSizePixel = 3
 MainFrame.Position = UDim2.new(0.192866579, 0, 0.179039299, 0)
 MainFrame.Selectable = true
-MainFrame.Size = UDim2.new(0, 613, 0, 390)
+MainFrame.Size = UDim2.new(0, 535, 0, 326)
 MainFrame.Visible = false
 
-TopPanel_2.Name = "TopPanel"
-TopPanel_2.Parent = MainFrame
-TopPanel_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-TopPanel_2.BorderColor3 = Color3.fromRGB(159, 109, 73)
-TopPanel_2.Size = UDim2.new(0, 613, 0, 49)
+TopPanel2.Name = "TopPanel2"
+TopPanel2.Parent = MainFrame
+TopPanel2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TopPanel2.BorderColor3 = Color3.fromRGB(159, 109, 73)
+TopPanel2.Size = UDim2.new(0, 535, 0, 49)
 
 Close_2.Name = "Close"
-Close_2.Parent = TopPanel_2
+Close_2.Parent = TopPanel2
 Close_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Close_2.BackgroundTransparency = 1.000
 Close_2.BorderColor3 = Color3.fromRGB(220, 147, 47)
@@ -183,7 +181,7 @@ Close_2.TextSize = 28.000
 Close_2.TextWrapped = true
 
 Title.Name = "Title"
-Title.Parent = TopPanel_2
+Title.Parent = TopPanel2
 Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Title.BackgroundTransparency = 1.000
 Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -197,6 +195,18 @@ Title.TextScaled = true
 Title.TextSize = 14.000
 Title.TextStrokeTransparency = 0.000
 Title.TextWrapped = true
+
+TextButton.Parent = TopPanel2
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.748776555, 0, -0.0204081628, 0)
+TextButton.Size = UDim2.new(0, 65, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Reset"
+TextButton.TextColor3 = Color3.fromRGB(159, 109, 73)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
 
 Water.Name = "Water"
 Water.Parent = MainFrame
@@ -353,14 +363,9 @@ Wind.TextColor3 = Color3.fromRGB(159, 109, 73)
 Wind.TextScaled = true
 Wind.TextSize = 14.000
 Wind.TextWrapped = true
-print("no")
+TextButton.Name = "Reset"
 
 
-
-print("222no")
---varibles
-
-print("yesbbbbbb")
 
 local TS = game:GetService("TweenService")
 local TI1 = TweenInfo.new(0.5)
@@ -439,7 +444,8 @@ end
 
 if game.GameId ~= 1571905185 then
 	Start.Text = "Not Wisteria!"
-	
+	script.Disabled = true
+
 end
 
 Close_2.MouseButton1Click:Connect(function()
@@ -462,32 +468,32 @@ end)
 Start.MouseButton1Click:Connect(function()
 
 
-		print("Started!")
+	print("Started!")
 
-		local fadeGameSelectFrame1 = TS:Create(AfterWardsFrame.TopPanel,TI1,{BackgroundTransparency=1})
-		local fadeGameSelectFrame2 = TS:Create(AfterWardsFrame.TopPanel.Close,TI1,{TextTransparency=1})
-		local fadeGameSelectFrame3 = TS:Create(AfterWardsFrame.TopPanel.Username,TI1,{TextTransparency=1})
-		local fadeGameSelectFrame4 = TS:Create(AfterWardsFrame.Start,TI1,{TextTransparency=1})
-		local fadeGameSelectFrame5 = TS:Create(AfterWardsFrame.GameName,TI1,{TextTransparency=1})
-		local fadeGameSelectFrame6 = TS:Create(AfterWardsFrame.GameName,TI1,{BackgroundTransparency=1})
-		local fadeGameSelectFrame7 = TS:Create(AfterWardsFrame.Start,TI1,{BackgroundTransparency=1})
-		local fadeGameSelectFrame8 = TS:Create(AfterWardsFrame,TI1,{BackgroundTransparency=1})
+	local fadeGameSelectFrame1 = TS:Create(AfterWardsFrame.TopPanel,TI1,{BackgroundTransparency=1})
+	local fadeGameSelectFrame2 = TS:Create(AfterWardsFrame.TopPanel.Close,TI1,{TextTransparency=1})
+	local fadeGameSelectFrame3 = TS:Create(AfterWardsFrame.TopPanel.Username,TI1,{TextTransparency=1})
+	local fadeGameSelectFrame4 = TS:Create(AfterWardsFrame.Start,TI1,{TextTransparency=1})
+	local fadeGameSelectFrame5 = TS:Create(AfterWardsFrame.GameName,TI1,{TextTransparency=1})
+	local fadeGameSelectFrame6 = TS:Create(AfterWardsFrame.GameName,TI1,{BackgroundTransparency=1})
+	local fadeGameSelectFrame7 = TS:Create(AfterWardsFrame.Start,TI1,{BackgroundTransparency=1})
+	local fadeGameSelectFrame8 = TS:Create(AfterWardsFrame,TI1,{BackgroundTransparency=1})
 
-		--fade-in all of game selecter frame
+	--fade-in all of game selecter frame
 
-		fadeGameSelectFrame1:Play()
-		fadeGameSelectFrame2:Play()
-		fadeGameSelectFrame3:Play()
-		fadeGameSelectFrame4:Play()
-		fadeGameSelectFrame5:Play()
-		fadeGameSelectFrame6:Play()
-		fadeGameSelectFrame7:Play()
-		fadeGameSelectFrame8:Play()
-		wait(1.5)
-		AfterWardsFrame.Visible = false
-		MainFrame.Visible = true
-		print("BRUH")
-	
+	fadeGameSelectFrame1:Play()
+	fadeGameSelectFrame2:Play()
+	fadeGameSelectFrame3:Play()
+	fadeGameSelectFrame4:Play()
+	fadeGameSelectFrame5:Play()
+	fadeGameSelectFrame6:Play()
+	fadeGameSelectFrame7:Play()
+	fadeGameSelectFrame8:Play()
+	wait(1.5)
+	AfterWardsFrame.Visible = false
+	MainFrame.Visible = true
+	print("BRUH")
+
 end)
 
 MainFrame.Draggable = true
@@ -495,49 +501,82 @@ MainFrame.Active = true
 
 Beast.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Beast")
+	Beast.Text = "Checked"
 end)
 
 Flame.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Flame")
+	Flame.Text = "Checked"
+
 end)
 
 Water.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Water")
+	Water.Text = "Checked!"
+
 end)
 
 Sound.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Sound")
+	Sound.Text = "Checked!"
+
 end)
 
 Mist.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Mist")
+	Mist.Text = "Checked!"
+
 end)
 
 Moon.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Moon")
+	Moon.Text = "Checked!"
+
 end)
 
 Insect.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Insect")
+	Insect.Text = "Checked!"
+
 end)
 
 Wind.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Wind")
+	Wind.Text = "Checked!"
+
 end)
 
 Love.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Love")
+	Love.Text = "Checked!"
 end)
 
 Thunder.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Thunder")
+	Thunder.Text = "Checked!"
 end)
 
 Serpent.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Serpent")
+	Serpent.Text = "Checked!"
 end)
 
 Stone.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Stone")
+	Stone.Text = "Checked!"
 end)
 
+TextButton.MouseButton1Click:Connect(function()
+	Stone.Text = "Stone"
+	Wind.Text = "Wind"
+	Serpent.Text = "Serpent"
+	Love.Text = "Love"
+	Moon.Text = "Moon"
+	Sound.Text = "Sound"
+	Flame.Text = "Flame"
+	Water.Text = "Water"
+	Insect.Text = "Insect"
+	Beast.Text = "Beast"
+	Mist.Text = "Mist"
+	Thunder.Text = "Thunder"
+end)
