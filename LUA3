@@ -1,0 +1,1120 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local MultiGUI = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local TopPanel = Instance.new("Frame")
+local TabsOpenButton = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local Selector = Instance.new("Frame")
+local TabsCloseButton = Instance.new("TextButton")
+local BreathingSelect = Instance.new("TextButton")
+local WeaponSelect = Instance.new("TextButton")
+local FoodSelect = Instance.new("TextButton")
+local ClothesSelect = Instance.new("TextButton")
+local WeaponsFrame = Instance.new("Frame")
+local StoneWeapons = Instance.new("TextButton")
+local DualKatana = Instance.new("TextButton")
+local UselessTextLabel = Instance.new("TextLabel")
+local BreathingFrame = Instance.new("Frame")
+local BreathingListFrame = Instance.new("ScrollingFrame")
+local Beast = Instance.new("TextButton")
+local Flame = Instance.new("TextButton")
+local Love = Instance.new("TextButton")
+local Insect = Instance.new("TextButton")
+local Mist = Instance.new("TextButton")
+local Moon = Instance.new("TextButton")
+local Sound = Instance.new("TextButton")
+local Serpent = Instance.new("TextButton")
+local Water = Instance.new("TextButton")
+local Stone = Instance.new("TextButton")
+local Thunder = Instance.new("TextButton")
+local Wind = Instance.new("TextButton")
+local ResetBR = Instance.new("TextButton")
+local FoodFrame = Instance.new("Frame")
+local Ramen = Instance.new("TextButton")
+local Onigiri = Instance.new("TextButton")
+local ClothesFrame = Instance.new("Frame")
+local ClothesList = Instance.new("ScrollingFrame")
+local Cloth1 = Instance.new("ImageButton")
+local Cloth2 = Instance.new("ImageButton")
+local Cloth3 = Instance.new("ImageButton")
+local Cloth6 = Instance.new("ImageButton")
+local Cloth5 = Instance.new("ImageButton")
+local Cloth4 = Instance.new("ImageButton")
+local Cloth9 = Instance.new("ImageButton")
+local Cloth8 = Instance.new("ImageButton")
+local Cloth7 = Instance.new("ImageButton")
+local Cloth12 = Instance.new("ImageButton")
+local Cloth11 = Instance.new("ImageButton")
+local Cloth10 = Instance.new("ImageButton")
+local Cloth15 = Instance.new("ImageButton")
+local Cloth14 = Instance.new("ImageButton")
+local Cloth13 = Instance.new("ImageButton")
+local Cloth18 = Instance.new("ImageButton")
+local Cloth17 = Instance.new("ImageButton")
+local Cloth16 = Instance.new("ImageButton")
+local Cloth20 = Instance.new("ImageButton")
+local Cloth19 = Instance.new("ImageButton")
+
+--Properties:
+
+MultiGUI.Name = "MultiGUI"
+MultiGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MultiGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = MultiGUI
+MainFrame.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+MainFrame.BorderSizePixel = 0
+MainFrame.ClipsDescendants = true
+MainFrame.Position = UDim2.new(0.241743729, 0, 0.227074236, 0)
+MainFrame.Size = UDim2.new(0, 410, 0, 358)
+
+TopPanel.Name = "TopPanel"
+TopPanel.Parent = MainFrame
+TopPanel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TopPanel.BorderSizePixel = 0
+TopPanel.Size = UDim2.new(0, 410, 0, 34)
+
+TabsOpenButton.Name = "TabsOpenButton"
+TabsOpenButton.Parent = TopPanel
+TabsOpenButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabsOpenButton.BackgroundTransparency = 1.000
+TabsOpenButton.Size = UDim2.new(0, 42, 0, 34)
+TabsOpenButton.Font = Enum.Font.SourceSans
+TabsOpenButton.Text = "> "
+TabsOpenButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TabsOpenButton.TextScaled = true
+TabsOpenButton.TextSize = 14.000
+TabsOpenButton.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = TopPanel
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.887804866, 0, 0, 0)
+Close.Size = UDim2.new(0, 46, 0, 34)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "x"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+Selector.Name = "Selector"
+Selector.Parent = MainFrame
+Selector.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Selector.BorderSizePixel = 0
+Selector.Position = UDim2.new(-0.324390233, 0, 0, 0)
+Selector.Size = UDim2.new(0, 133, 0, 358)
+
+TabsCloseButton.Name = "TabsCloseButton"
+TabsCloseButton.Parent = Selector
+TabsCloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabsCloseButton.BackgroundTransparency = 1.000
+TabsCloseButton.Size = UDim2.new(0, 42, 0, 34)
+TabsCloseButton.Font = Enum.Font.SourceSans
+TabsCloseButton.Text = "<"
+TabsCloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TabsCloseButton.TextScaled = true
+TabsCloseButton.TextSize = 14.000
+TabsCloseButton.TextWrapped = true
+
+BreathingSelect.Name = "BreathingSelect"
+BreathingSelect.Parent = Selector
+BreathingSelect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BreathingSelect.BackgroundTransparency = 1.000
+BreathingSelect.Position = UDim2.new(0, 0, 0.0949720591, 0)
+BreathingSelect.Size = UDim2.new(0, 133, 0, 34)
+BreathingSelect.Font = Enum.Font.GothamBlack
+BreathingSelect.Text = "Breathings"
+BreathingSelect.TextColor3 = Color3.fromRGB(255, 255, 255)
+BreathingSelect.TextSize = 14.000
+
+WeaponSelect.Name = "WeaponSelect"
+WeaponSelect.Parent = Selector
+WeaponSelect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WeaponSelect.BackgroundTransparency = 1.000
+WeaponSelect.Position = UDim2.new(0, 0, 0.189944133, 0)
+WeaponSelect.Size = UDim2.new(0, 133, 0, 34)
+WeaponSelect.Font = Enum.Font.GothamBlack
+WeaponSelect.Text = "Weapons"
+WeaponSelect.TextColor3 = Color3.fromRGB(255, 255, 255)
+WeaponSelect.TextSize = 14.000
+
+FoodSelect.Name = "FoodSelect"
+FoodSelect.Parent = Selector
+FoodSelect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FoodSelect.BackgroundTransparency = 1.000
+FoodSelect.Position = UDim2.new(0, 0, 0.284916222, 0)
+FoodSelect.Size = UDim2.new(0, 133, 0, 34)
+FoodSelect.Font = Enum.Font.GothamBlack
+FoodSelect.Text = "Food"
+FoodSelect.TextColor3 = Color3.fromRGB(255, 255, 255)
+FoodSelect.TextSize = 14.000
+
+ClothesSelect.Name = "ClothesSelect"
+ClothesSelect.Parent = Selector
+ClothesSelect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ClothesSelect.BackgroundTransparency = 1.000
+ClothesSelect.Position = UDim2.new(0, 0, 0.379888296, 0)
+ClothesSelect.Size = UDim2.new(0, 133, 0, 34)
+ClothesSelect.Font = Enum.Font.GothamBlack
+ClothesSelect.Text = "Clothing"
+ClothesSelect.TextColor3 = Color3.fromRGB(255, 255, 255)
+ClothesSelect.TextSize = 14.000
+
+WeaponsFrame.Name = "WeaponsFrame"
+WeaponsFrame.Parent = MainFrame
+WeaponsFrame.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+WeaponsFrame.BorderSizePixel = 0
+WeaponsFrame.Position = UDim2.new(0.346341461, 0, 0.122905031, 0)
+WeaponsFrame.Size = UDim2.new(0, 259, 0, 304)
+WeaponsFrame.Visible = false
+
+StoneWeapons.Name = "StoneWeapons"
+StoneWeapons.Parent = WeaponsFrame
+StoneWeapons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StoneWeapons.BackgroundTransparency = 1.000
+StoneWeapons.Position = UDim2.new(0.111969113, 0, 0.0526315793, 0)
+StoneWeapons.Size = UDim2.new(0, 200, 0, 50)
+StoneWeapons.Font = Enum.Font.SourceSans
+StoneWeapons.Text = "Stone Weapons"
+StoneWeapons.TextColor3 = Color3.fromRGB(255, 255, 255)
+StoneWeapons.TextScaled = true
+StoneWeapons.TextSize = 14.000
+StoneWeapons.TextWrapped = true
+
+DualKatana.Name = "DualKatana"
+DualKatana.Parent = WeaponsFrame
+DualKatana.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DualKatana.BackgroundTransparency = 1.000
+DualKatana.Position = UDim2.new(0.111969113, 0, 0.243421048, 0)
+DualKatana.Size = UDim2.new(0, 200, 0, 50)
+DualKatana.Font = Enum.Font.SourceSans
+DualKatana.Text = "Dual Katanas"
+DualKatana.TextColor3 = Color3.fromRGB(255, 255, 255)
+DualKatana.TextScaled = true
+DualKatana.TextSize = 14.000
+DualKatana.TextWrapped = true
+
+UselessTextLabel.Name = "UselessTextLabel"
+UselessTextLabel.Parent = WeaponsFrame
+UselessTextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UselessTextLabel.BackgroundTransparency = 1.000
+UselessTextLabel.Position = UDim2.new(0, 0, 0.539473712, 0)
+UselessTextLabel.Size = UDim2.new(0, 259, 0, 140)
+UselessTextLabel.Font = Enum.Font.SourceSans
+UselessTextLabel.Text = "Just click the button till accept/decline pops up(press accept then BDAReset or just normal reset)"
+UselessTextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+UselessTextLabel.TextScaled = true
+UselessTextLabel.TextSize = 14.000
+UselessTextLabel.TextWrapped = true
+
+BreathingFrame.Name = "BreathingFrame"
+BreathingFrame.Parent = MainFrame
+BreathingFrame.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+BreathingFrame.BorderSizePixel = 0
+BreathingFrame.Position = UDim2.new(0.346341461, 0, 0.122905031, 0)
+BreathingFrame.Size = UDim2.new(0, 259, 0, 304)
+BreathingFrame.Visible = false
+BreathingFrame.ZIndex = 2
+
+BreathingListFrame.Name = "BreathingListFrame"
+BreathingListFrame.Parent = BreathingFrame
+BreathingListFrame.Active = true
+BreathingListFrame.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+BreathingListFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BreathingListFrame.BorderSizePixel = 0
+BreathingListFrame.Position = UDim2.new(0.0261690002, 0, 0.027170483, 0)
+BreathingListFrame.Size = UDim2.new(0, 241, 0, 249)
+
+Beast.Name = "Beast"
+Beast.Parent = BreathingListFrame
+Beast.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Beast.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Beast.BorderSizePixel = 0
+Beast.Position = UDim2.new(0.0350318551, 0, 0.0288493447, 0)
+Beast.Size = UDim2.new(0, 120, 0, 30)
+Beast.Font = Enum.Font.SourceSans
+Beast.Text = "Beast"
+Beast.TextColor3 = Color3.fromRGB(255, 255, 255)
+Beast.TextScaled = true
+Beast.TextSize = 14.000
+Beast.TextWrapped = true
+
+Flame.Name = "Flame"
+Flame.Parent = BreathingListFrame
+Flame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Flame.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Flame.BorderSizePixel = 0
+Flame.Position = UDim2.new(0.506369472, 0, 0.0288493447, 0)
+Flame.Size = UDim2.new(0, 120, 0, 30)
+Flame.Font = Enum.Font.SourceSans
+Flame.Text = "Flame"
+Flame.TextColor3 = Color3.fromRGB(255, 255, 255)
+Flame.TextScaled = true
+Flame.TextSize = 14.000
+Flame.TextWrapped = true
+
+Love.Name = "Love"
+Love.Parent = BreathingListFrame
+Love.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Love.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Love.BorderSizePixel = 0
+Love.Position = UDim2.new(0.506369472, 0, 0.0929062814, 0)
+Love.Size = UDim2.new(0, 120, 0, 30)
+Love.Font = Enum.Font.SourceSans
+Love.Text = "Love"
+Love.TextColor3 = Color3.fromRGB(255, 255, 255)
+Love.TextScaled = true
+Love.TextSize = 14.000
+Love.TextWrapped = true
+
+Insect.Name = "Insect"
+Insect.Parent = BreathingListFrame
+Insect.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Insect.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Insect.BorderSizePixel = 0
+Insect.Position = UDim2.new(0.0350318551, 0, 0.0929062814, 0)
+Insect.Size = UDim2.new(0, 120, 0, 30)
+Insect.Font = Enum.Font.SourceSans
+Insect.Text = "Insect"
+Insect.TextColor3 = Color3.fromRGB(255, 255, 255)
+Insect.TextScaled = true
+Insect.TextSize = 14.000
+Insect.TextWrapped = true
+
+Mist.Name = "Mist"
+Mist.Parent = BreathingListFrame
+Mist.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Mist.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Mist.BorderSizePixel = 0
+Mist.Position = UDim2.new(0.0350318551, 0, 0.158742592, 0)
+Mist.Size = UDim2.new(0, 120, 0, 30)
+Mist.Font = Enum.Font.SourceSans
+Mist.Text = "Mist"
+Mist.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mist.TextScaled = true
+Mist.TextSize = 14.000
+Mist.TextWrapped = true
+
+Moon.Name = "Moon"
+Moon.Parent = BreathingListFrame
+Moon.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Moon.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Moon.BorderSizePixel = 0
+Moon.Position = UDim2.new(0.506369472, 0, 0.158742592, 0)
+Moon.Size = UDim2.new(0, 120, 0, 30)
+Moon.Font = Enum.Font.SourceSans
+Moon.Text = "Moon"
+Moon.TextColor3 = Color3.fromRGB(255, 255, 255)
+Moon.TextScaled = true
+Moon.TextSize = 14.000
+Moon.TextWrapped = true
+
+Sound.Name = "Sound"
+Sound.Parent = BreathingListFrame
+Sound.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Sound.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Sound.BorderSizePixel = 0
+Sound.Position = UDim2.new(0.506369472, 0, 0.222799525, 0)
+Sound.Size = UDim2.new(0, 120, 0, 30)
+Sound.Font = Enum.Font.SourceSans
+Sound.Text = "Sound"
+Sound.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sound.TextScaled = true
+Sound.TextSize = 14.000
+Sound.TextWrapped = true
+
+Serpent.Name = "Serpent"
+Serpent.Parent = BreathingListFrame
+Serpent.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Serpent.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Serpent.BorderSizePixel = 0
+Serpent.Position = UDim2.new(0.0350318551, 0, 0.222799525, 0)
+Serpent.Size = UDim2.new(0, 120, 0, 30)
+Serpent.Font = Enum.Font.SourceSans
+Serpent.Text = "Serpent"
+Serpent.TextColor3 = Color3.fromRGB(255, 255, 255)
+Serpent.TextScaled = true
+Serpent.TextSize = 14.000
+Serpent.TextWrapped = true
+
+Water.Name = "Water"
+Water.Parent = BreathingListFrame
+Water.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Water.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Water.BorderSizePixel = 0
+Water.Position = UDim2.new(0.0350318551, 0, 0.354472101, 0)
+Water.Size = UDim2.new(0, 120, 0, 30)
+Water.Font = Enum.Font.SourceSans
+Water.Text = "Water"
+Water.TextColor3 = Color3.fromRGB(255, 255, 255)
+Water.TextScaled = true
+Water.TextSize = 14.000
+Water.TextWrapped = true
+
+Stone.Name = "Stone"
+Stone.Parent = BreathingListFrame
+Stone.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Stone.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Stone.BorderSizePixel = 0
+Stone.Position = UDim2.new(0.0350318551, 0, 0.290415168, 0)
+Stone.Size = UDim2.new(0, 120, 0, 30)
+Stone.Font = Enum.Font.SourceSans
+Stone.Text = "Stone"
+Stone.TextColor3 = Color3.fromRGB(255, 255, 255)
+Stone.TextScaled = true
+Stone.TextSize = 14.000
+Stone.TextWrapped = true
+
+Thunder.Name = "Thunder"
+Thunder.Parent = BreathingListFrame
+Thunder.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Thunder.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Thunder.BorderSizePixel = 0
+Thunder.Position = UDim2.new(0.506369472, 0, 0.290415168, 0)
+Thunder.Size = UDim2.new(0, 120, 0, 30)
+Thunder.Font = Enum.Font.SourceSans
+Thunder.Text = "Thunder"
+Thunder.TextColor3 = Color3.fromRGB(255, 255, 255)
+Thunder.TextScaled = true
+Thunder.TextSize = 14.000
+Thunder.TextWrapped = true
+
+Wind.Name = "Wind"
+Wind.Parent = BreathingListFrame
+Wind.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Wind.BorderColor3 = Color3.fromRGB(15, 15, 15)
+Wind.BorderSizePixel = 0
+Wind.Position = UDim2.new(0.506369472, 0, 0.354472101, 0)
+Wind.Size = UDim2.new(0, 120, 0, 30)
+Wind.Font = Enum.Font.SourceSans
+Wind.Text = "Wind"
+Wind.TextColor3 = Color3.fromRGB(255, 255, 255)
+Wind.TextScaled = true
+Wind.TextSize = 14.000
+Wind.TextWrapped = true
+
+ResetBR.Name = "ResetBR"
+ResetBR.Parent = BreathingFrame
+ResetBR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ResetBR.BackgroundTransparency = 1.000
+ResetBR.Position = UDim2.new(0.289575279, 0, 0.885723114, 0)
+ResetBR.Size = UDim2.new(0, 125, 0, 27)
+ResetBR.Font = Enum.Font.SourceSans
+ResetBR.Text = "Reset"
+ResetBR.TextColor3 = Color3.fromRGB(255, 255, 255)
+ResetBR.TextScaled = true
+ResetBR.TextSize = 14.000
+ResetBR.TextWrapped = true
+
+FoodFrame.Name = "FoodFrame"
+FoodFrame.Parent = MainFrame
+FoodFrame.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+FoodFrame.BorderSizePixel = 0
+FoodFrame.Position = UDim2.new(0.346341461, 0, 0.122905031, 0)
+FoodFrame.Size = UDim2.new(0, 259, 0, 304)
+FoodFrame.Visible = false
+
+Ramen.Name = "Ramen"
+Ramen.Parent = FoodFrame
+Ramen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Ramen.BackgroundTransparency = 1.000
+Ramen.Position = UDim2.new(0.111969113, 0, 0.0526315793, 0)
+Ramen.Size = UDim2.new(0, 200, 0, 50)
+Ramen.Font = Enum.Font.SourceSans
+Ramen.Text = "Ramen"
+Ramen.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ramen.TextScaled = true
+Ramen.TextSize = 14.000
+Ramen.TextWrapped = true
+
+Onigiri.Name = "Onigiri"
+Onigiri.Parent = FoodFrame
+Onigiri.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Onigiri.BackgroundTransparency = 1.000
+Onigiri.Position = UDim2.new(0.111969113, 0, 0.243421048, 0)
+Onigiri.Size = UDim2.new(0, 200, 0, 50)
+Onigiri.Font = Enum.Font.SourceSans
+Onigiri.Text = "Onigiri"
+Onigiri.TextColor3 = Color3.fromRGB(255, 255, 255)
+Onigiri.TextScaled = true
+Onigiri.TextSize = 14.000
+Onigiri.TextWrapped = true
+
+ClothesFrame.Name = "ClothesFrame"
+ClothesFrame.Parent = MainFrame
+ClothesFrame.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+ClothesFrame.BorderSizePixel = 0
+ClothesFrame.Position = UDim2.new(0.346341461, 0, 0.122905031, 0)
+ClothesFrame.Size = UDim2.new(0, 259, 0, 304)
+ClothesFrame.Visible = false
+
+ClothesList.Name = "ClothesList"
+ClothesList.Parent = ClothesFrame
+ClothesList.Active = true
+ClothesList.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+ClothesList.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ClothesList.Position = UDim2.new(0.0231660232, 0, 0.0296052638, 0)
+ClothesList.Size = UDim2.new(0, 247, 0, 285)
+ClothesList.CanvasPosition = Vector2.new(0, 150)
+
+Cloth1.Name = "Cloth1"
+Cloth1.Parent = ClothesList
+Cloth1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth1.Size = UDim2.new(0, 65, 0, 49)
+Cloth1.Image = "http://www.roblox.com/asset/?id=8259246277"
+
+Cloth2.Name = "Cloth2"
+Cloth2.Parent = ClothesList
+Cloth2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth2.Position = UDim2.new(0.263157904, 0, 0, 0)
+Cloth2.Size = UDim2.new(0, 65, 0, 49)
+Cloth2.Image = "http://www.roblox.com/asset/?id=8259245550"
+
+Cloth3.Name = "Cloth3"
+Cloth3.Parent = ClothesList
+Cloth3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth3.Position = UDim2.new(0.526315808, 0, 0, 0)
+Cloth3.Size = UDim2.new(0, 65, 0, 49)
+Cloth3.Image = "http://www.roblox.com/asset/?id=8259244665"
+
+Cloth6.Name = "Cloth6"
+Cloth6.Parent = ClothesList
+Cloth6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth6.Position = UDim2.new(0.526315808, 0, 0.0805921033, 0)
+Cloth6.Size = UDim2.new(0, 65, 0, 49)
+Cloth6.Image = "http://www.roblox.com/asset/?id=8259243830"
+
+Cloth5.Name = "Cloth5"
+Cloth5.Parent = ClothesList
+Cloth5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth5.Position = UDim2.new(0.263157904, 0, 0.0805921033, 0)
+Cloth5.Size = UDim2.new(0, 65, 0, 49)
+Cloth5.Image = "http://www.roblox.com/asset/?id=8259242406"
+
+Cloth4.Name = "Cloth4"
+Cloth4.Parent = ClothesList
+Cloth4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth4.Position = UDim2.new(0, 0, 0.0805921033, 0)
+Cloth4.Size = UDim2.new(0, 65, 0, 49)
+Cloth4.Image = "http://www.roblox.com/asset/?id=8259243078"
+
+Cloth9.Name = "Cloth9"
+Cloth9.Parent = ClothesList
+Cloth9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth9.Position = UDim2.new(0.526315808, 0, 0.161184207, 0)
+Cloth9.Size = UDim2.new(0, 65, 0, 49)
+Cloth9.Image = "http://www.roblox.com/asset/?id=8259240983"
+
+Cloth8.Name = "Cloth8"
+Cloth8.Parent = ClothesList
+Cloth8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth8.Position = UDim2.new(0.263157904, 0, 0.161184207, 0)
+Cloth8.Size = UDim2.new(0, 65, 0, 49)
+Cloth8.Image = "http://www.roblox.com/asset/?id=8259242090"
+
+Cloth7.Name = "Cloth7"
+Cloth7.Parent = ClothesList
+Cloth7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth7.Position = UDim2.new(0, 0, 0.161184207, 0)
+Cloth7.Size = UDim2.new(0, 65, 0, 49)
+Cloth7.Image = "http://www.roblox.com/asset/?id=8259241652"
+
+Cloth12.Name = "Cloth12"
+Cloth12.Parent = ClothesList
+Cloth12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth12.Position = UDim2.new(0.526315808, 0, 0.241776317, 0)
+Cloth12.Size = UDim2.new(0, 65, 0, 49)
+Cloth12.Image = "http://www.roblox.com/asset/?id=8259240666"
+
+Cloth11.Name = "Cloth11"
+Cloth11.Parent = ClothesList
+Cloth11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth11.Position = UDim2.new(0.263157904, 0, 0.241776317, 0)
+Cloth11.Size = UDim2.new(0, 65, 0, 49)
+Cloth11.Image = "http://www.roblox.com/asset/?id=8259239961"
+
+Cloth10.Name = "Cloth10"
+Cloth10.Parent = ClothesList
+Cloth10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth10.Position = UDim2.new(0, 0, 0.241776317, 0)
+Cloth10.Size = UDim2.new(0, 65, 0, 49)
+Cloth10.Image = "http://www.roblox.com/asset/?id=8259240329"
+
+Cloth15.Name = "Cloth15"
+Cloth15.Parent = ClothesList
+Cloth15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth15.Position = UDim2.new(0.526315808, 0, 0.322368413, 0)
+Cloth15.Size = UDim2.new(0, 65, 0, 49)
+Cloth15.Image = "http://www.roblox.com/asset/?id=8259238957"
+
+Cloth14.Name = "Cloth14"
+Cloth14.Parent = ClothesList
+Cloth14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth14.Position = UDim2.new(0.263157904, 0, 0.322368413, 0)
+Cloth14.Size = UDim2.new(0, 65, 0, 49)
+Cloth14.Image = "http://www.roblox.com/asset/?id=8259239273"
+
+Cloth13.Name = "Cloth13"
+Cloth13.Parent = ClothesList
+Cloth13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth13.Position = UDim2.new(0, 0, 0.322368413, 0)
+Cloth13.Size = UDim2.new(0, 65, 0, 49)
+Cloth13.Image = "http://www.roblox.com/asset/?id=8259239588"
+
+Cloth18.Name = "Cloth18"
+Cloth18.Parent = ClothesList
+Cloth18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth18.Position = UDim2.new(0.526315808, 0, 0.404605269, 0)
+Cloth18.Size = UDim2.new(0, 65, 0, 49)
+Cloth18.Image = "http://www.roblox.com/asset/?id=8259238347"
+
+Cloth17.Name = "Cloth17"
+Cloth17.Parent = ClothesList
+Cloth17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth17.Position = UDim2.new(0.263157904, 0, 0.404605269, 0)
+Cloth17.Size = UDim2.new(0, 65, 0, 49)
+Cloth17.Image = "http://www.roblox.com/asset/?id=8259237964"
+
+Cloth16.Name = "Cloth16"
+Cloth16.Parent = ClothesList
+Cloth16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth16.Position = UDim2.new(0, 0, 0.404605269, 0)
+Cloth16.Size = UDim2.new(0, 65, 0, 49)
+Cloth16.Image = "http://www.roblox.com/asset/?id=8259238650"
+
+Cloth20.Name = "Cloth20"
+Cloth20.Parent = ClothesList
+Cloth20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth20.Position = UDim2.new(0.263157904, 0, 0.485197365, 0)
+Cloth20.Size = UDim2.new(0, 65, 0, 49)
+Cloth20.Image = "http://www.roblox.com/asset/?id=8259242773"
+
+Cloth19.Name = "Cloth19"
+Cloth19.Parent = ClothesList
+Cloth19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cloth19.Position = UDim2.new(0, 0, 0.485197365, 0)
+Cloth19.Size = UDim2.new(0, 65, 0, 49)
+Cloth19.Image = "http://www.roblox.com/asset/?id=8259241350"
+
+wait(1)
+local player = game.Players
+local TS = game:GetService("TweenService")
+local RS = game:GetService("RunService")
+local TI1 = TweenInfo.new(1)
+local TI2 = TweenInfo.new(.5)
+
+Close.MouseButton1Click:Connect(function()
+	game.Debris:AddItem(MultiGUI,0.1)
+end)
+
+local openTabs = TS:Create(Selector,TI2,{Position=UDim2.new(0,0,0,0)})
+local CloseTabs = TS:Create(Selector,TI2,{Position=UDim2.new(-0.324, 0,0, 0)})
+
+TabsOpenButton.MouseButton1Click:connect(function()
+	openTabs:Play()
+end)
+
+TabsCloseButton.MouseButton1Click:connect(function()
+	CloseTabs:Play()
+end)
+
+BreathingSelect.MouseButton1Click:connect(function()
+	ClothesFrame.Visible = false
+	FoodFrame.Visible = false
+	WeaponsFrame.Visible = false
+	BreathingFrame.Visible = true
+end)
+
+WeaponSelect.MouseButton1Click:connect(function()
+	ClothesFrame.Visible = false
+	FoodFrame.Visible = false
+	WeaponsFrame.Visible = true
+	BreathingFrame.Visible = false
+end)
+
+FoodSelect.MouseButton1Click:connect(function()
+	ClothesFrame.Visible = false
+	FoodFrame.Visible = true
+	WeaponsFrame.Visible = false
+	BreathingFrame.Visible = false
+end)
+
+ClothesSelect.MouseButton1Click:connect(function()
+	ClothesFrame.Visible = true
+	FoodFrame.Visible = false
+	WeaponsFrame.Visible = false
+	BreathingFrame.Visible = false
+end)
+
+ResetBR.MouseButton1Click:connect(function()
+	Stone.Text = "Stone"
+	Wind.Text = "Wind"
+	Serpent.Text = "Serpent"
+	Love.Text = "Love"
+	Moon.Text = "Moon"
+	Sound.Text = "Sound"
+	Flame.Text = "Flame"
+	Water.Text = "Water"
+	Insect.Text = "Insect"
+	Beast.Text = "Beast"
+	Mist.Text = "Mist"
+	Thunder.Text = "Thunder"
+end)
+
+StoneWeapons.MouseButton1Click:Connect(function()
+	fireclickdetector(game.Workspace.NPC.Stone.Torso.ClickDetector)
+end)
+DualKatana.MouseButton1Click:Connect(function()
+	fireclickdetector(game.Workspace.NPC.Sound.Torso.ClickDetector)
+end)
+
+
+MainFrame.Draggable = true
+MainFrame.Active = true
+
+Beast.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Beast")
+	Beast.Text = "Checked"
+end)
+
+Flame.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Flame")
+	Flame.Text = "Checked"
+
+end)
+
+Water.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Water")
+	Water.Text = "Checked!"
+
+end)
+
+Sound.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Sound")
+	Sound.Text = "Checked!"
+
+end)
+
+Mist.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Mist")
+	Mist.Text = "Checked!"
+
+end)
+
+Moon.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Moon")
+	Moon.Text = "Checked!"
+
+end)
+
+Insect.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Insect")
+	Insect.Text = "Checked!"
+
+end)
+
+Wind.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Wind")
+	Wind.Text = "Checked!"
+
+end)
+
+Love.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Love")
+	Love.Text = "Checked!"
+end)
+
+Thunder.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Thunder")
+	Thunder.Text = "Checked!"
+end)
+
+Serpent.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Serpent")
+	Serpent.Text = "Checked!"
+end)
+
+Stone.MouseButton1Click:connect(function()
+	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Stone")
+	Stone.Text = "Checked!"
+end)
+
+Ramen.MouseButton1Click:connect(function()
+	fireclickdetector(game:GetService("Workspace").Shop.Ramen.Head.ClickDetector)
+end)
+
+Onigiri.MouseButton1Click:connect(function()
+	fireclickdetector(game:GetService("Workspace").Shop.Onigiri.Head.ClickDetector)
+end)
+
+Cloth1.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=5187872985" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+
+Cloth2.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=2647851789" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+
+Cloth3.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=2479968066" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+
+Cloth4.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=609748436" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+
+Cloth5.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=3158152533" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth6.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=993104245" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth7.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=51407778" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth8.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=3157972672" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth9.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=5163436029" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth10.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=5589888209" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth11.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=5283037955" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth12.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=5078278404" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth13.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=4945685041" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth14.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=4690309522" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth15.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=5965313612" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth16.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=6016303659" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth17.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=5109962208" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth18.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=3162949823" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth19.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=5143361405" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
+Cloth20.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace:FindFirstChild("Demon Outfits"):GetChildren()) do
+		--print(v)
+		for _, m in pairs(v:GetDescendants()) do
+
+			if m.ClassName == "Shirt" then
+				local shirtid = m.ShirtTemplate
+				--print(shirtid)
+				if shirtid == "http://www.roblox.com/asset/?id=748693935" then
+					--print("Found it!!")
+					print(m.Parent)
+					--print(m.Parent.HumanoidRootPart.Name)
+					fireclickdetector(m.Parent.HumanoidRootPart.ClickDetector)
+				end
+			end
+		end
+	end
+end)
