@@ -65,6 +65,7 @@ local Umbrella = Instance.new("TextButton")
 local LowHPHaori = Instance.new("TextButton")
 local StoneWeapons = Instance.new("TextButton")
 local Dualkatanas = Instance.new("TextButton")
+local Lamp = Instance.new("TextButton")
 
 --Properties:
 
@@ -656,7 +657,7 @@ Umbrella.Name = "Umbrella"
 Umbrella.Parent = MiscFrame
 Umbrella.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Umbrella.BackgroundTransparency = 1.000
-Umbrella.Position = UDim2.new(0.236220479, 0, 0.113333337, 0)
+Umbrella.Position = UDim2.new(0.236220479, 0, 0.026666671, 0)
 Umbrella.Size = UDim2.new(0, 200, 0, 50)
 Umbrella.Font = Enum.Font.SourceSans
 Umbrella.Text = "Umbrella"
@@ -669,7 +670,7 @@ LowHPHaori.Name = "LowHPHaori"
 LowHPHaori.Parent = MiscFrame
 LowHPHaori.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 LowHPHaori.BackgroundTransparency = 1.000
-LowHPHaori.Position = UDim2.new(0.236220479, 0, 0.316666663, 0)
+LowHPHaori.Position = UDim2.new(0.236220479, 0, 0.376666665, 0)
 LowHPHaori.Size = UDim2.new(0, 200, 0, 50)
 LowHPHaori.Font = Enum.Font.SourceSans
 LowHPHaori.Text = "LowHP Haori"
@@ -682,7 +683,7 @@ StoneWeapons.Name = "StoneWeapons"
 StoneWeapons.Parent = MiscFrame
 StoneWeapons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 StoneWeapons.BackgroundTransparency = 1.000
-StoneWeapons.Position = UDim2.new(0.236220479, 0, 0.513333321, 0)
+StoneWeapons.Position = UDim2.new(0.236220479, 0, 0.209999979, 0)
 StoneWeapons.Size = UDim2.new(0, 200, 0, 50)
 StoneWeapons.Font = Enum.Font.SourceSans
 StoneWeapons.Text = "Stone Weapons"
@@ -695,7 +696,7 @@ Dualkatanas.Name = "Dualkatanas"
 Dualkatanas.Parent = MiscFrame
 Dualkatanas.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Dualkatanas.BackgroundTransparency = 1.000
-Dualkatanas.Position = UDim2.new(0.236220479, 0, 0.680000007, 0)
+Dualkatanas.Position = UDim2.new(0.236220479, 0, 0.543333352, 0)
 Dualkatanas.Size = UDim2.new(0, 200, 0, 50)
 Dualkatanas.Font = Enum.Font.SourceSans
 Dualkatanas.Text = "Dual Katanas"
@@ -703,6 +704,20 @@ Dualkatanas.TextColor3 = Color3.fromRGB(255, 255, 255)
 Dualkatanas.TextScaled = true
 Dualkatanas.TextSize = 14.000
 Dualkatanas.TextWrapped = true
+
+Lamp.Name = "Lamp"
+Lamp.Parent = MiscFrame
+Lamp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Lamp.BackgroundTransparency = 1.000
+Lamp.Position = UDim2.new(0.236220479, 0, 0.706666708, 0)
+Lamp.Size = UDim2.new(0, 200, 0, 50)
+Lamp.Font = Enum.Font.SourceSans
+Lamp.Text = "Lamp"
+Lamp.TextColor3 = Color3.fromRGB(255, 255, 255)
+Lamp.TextScaled = true
+Lamp.TextSize = 14.000
+Lamp.TextWrapped = true
+
 local GUITOGGLE = false
 local uis = game:GetService("UserInputService")
 
@@ -1396,4 +1411,16 @@ end)
 Stone.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Stone")
 	Stone.Text = "Checked!"
+end)
+
+Lamp.MouseButton1Click:Connect(function()
+	for i,v in pairs(game.Workspace.Shop:GetChildren()) do
+		if v.Name == "" and v.ClassName == "Model" then
+			print("FOUND")
+			if v.Value.Value == "Light" then
+
+				fireclickdetector(v.Head.ClickDetector)
+			end
+		end
+	end
 end)
