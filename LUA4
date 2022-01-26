@@ -45,6 +45,8 @@ local Cloth17 = Instance.new("ImageButton")
 local Cloth16 = Instance.new("ImageButton")
 local Cloth20 = Instance.new("ImageButton")
 local Cloth19 = Instance.new("ImageButton")
+local NoHairC = Instance.new("TextButton")
+local BlackHaori = Instance.new("TextButton")
 local BreathingFrame = Instance.new("Frame")
 local BreathingListFrame = Instance.new("ScrollingFrame")
 local Beast = Instance.new("TextButton")
@@ -449,6 +451,32 @@ Cloth19.Position = UDim2.new(0, 0, 0.485197365, 0)
 Cloth19.Size = UDim2.new(0, 65, 0, 49)
 Cloth19.Image = "http://www.roblox.com/asset/?id=8259241350"
 
+NoHairC.Name = "NoHairC"
+NoHairC.Parent = CustomFrame
+NoHairC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NoHairC.BackgroundTransparency = 1.000
+NoHairC.Position = UDim2.new(0, 0, 0.679999948, 0)
+NoHairC.Size = UDim2.new(0, 117, 0, 50)
+NoHairC.Font = Enum.Font.SourceSans
+NoHairC.Text = "No HairC"
+NoHairC.TextColor3 = Color3.fromRGB(255, 255, 255)
+NoHairC.TextScaled = true
+NoHairC.TextSize = 14.000
+NoHairC.TextWrapped = true
+
+BlackHaori.Name = "BlackHaori"
+BlackHaori.Parent = CustomFrame
+BlackHaori.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BlackHaori.BackgroundTransparency = 1.000
+BlackHaori.Position = UDim2.new(0, 0, 0.853333235, 0)
+BlackHaori.Size = UDim2.new(0, 117, 0, 44)
+BlackHaori.Font = Enum.Font.SourceSans
+BlackHaori.Text = "Black Haori"
+BlackHaori.TextColor3 = Color3.fromRGB(255, 255, 255)
+BlackHaori.TextScaled = true
+BlackHaori.TextSize = 14.000
+BlackHaori.TextWrapped = true
+
 BreathingFrame.Name = "BreathingFrame"
 BreathingFrame.Parent = MainFrame
 BreathingFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
@@ -739,7 +767,7 @@ local TS = game:GetService("TweenService")
 local RS = game:GetService("RunService")
 local TI1 = TweenInfo.new(1) 
 local TI2 = TweenInfo.new(.5)
-local SelectorTab = false --WYSI
+local SelectorTab = false
 local MiscToggle = false
 local FoodToggle = false
 local BreathToggle = false
@@ -1408,18 +1436,32 @@ Serpent.MouseButton1Click:connect(function()
 	Serpent.Text = "Checked!"
 end)
 
+
 Stone.MouseButton1Click:connect(function()
 	game:GetService("ReplicatedStorage").BattleNPC:FireServer("Stone")
 	Stone.Text = "Checked!"
 end)
 
-Lamp.MouseButton1Click:Connect(function()
-	for i,v in pairs(game.Workspace.Shop:GetChildren()) do
-		if v.Name == "" and v.ClassName == "Model" then
-			print("FOUND")
-			if v.Value.Value == "Light" then
+NoHairC.MouseButton1Click:Connect(function()
+	for _, v in pairs(game.Workspace.Living:FindFirstChild(game.Players.LocalPlayer.Name):GetChildren()) do
+		if v.ClassName == "Accessory" then 
+			for j, k in pairs(v.Handle:GetChildren()) do
+				if k.ClassName == "Decal" then
+					k:Destroy()
+				end
+			end
+		end
+	end
+end)
 
-				fireclickdetector(v.Head.ClickDetector)
+BlackHaori.MouseButton1Click:Connect(function()
+	for i, g in pairs(game.Workspace.Living:FindFirstChild(game.Players.LocalPlayer.Name):GetChildren()) do
+		if g.Name == "Haoripart" then
+			for l, k in pairs(g:GetChildren()) do
+				print(k)
+				if k.name == "Texture" then
+					k:Destroy()
+				end
 			end
 		end
 	end
