@@ -16,6 +16,8 @@ local SelectMisc = Instance.new("TextButton")
 local IconMisc = Instance.new("ImageButton")
 local SelectCustom = Instance.new("TextButton")
 local IconCustom = Instance.new("ImageButton")
+local SelectTeleport = Instance.new("TextButton")
+local location_on = Instance.new("ImageButton")
 local FoodFrame = Instance.new("Frame")
 local Ramen = Instance.new("TextButton")
 local Onigiri = Instance.new("TextButton")
@@ -68,6 +70,14 @@ local LowHPHaori = Instance.new("TextButton")
 local StoneWeapons = Instance.new("TextButton")
 local Dualkatanas = Instance.new("TextButton")
 local Lamp = Instance.new("TextButton")
+local FishingRod = Instance.new("TextButton")
+local Sharpness = Instance.new("TextButton")
+local TeleportFrame = Instance.new("Frame")
+local RenVillage = Instance.new("TextButton")
+local Spawnvillage = Instance.new("TextButton")
+local FishingDocks = Instance.new("TextButton")
+local InsectPlace = Instance.new("TextButton")
+local Kayaga = Instance.new("TextButton")
 
 --Properties:
 
@@ -211,6 +221,30 @@ IconCustom.ZIndex = 2
 IconCustom.Image = "rbxassetid://3926305904"
 IconCustom.ImageRectOffset = Vector2.new(324, 604)
 IconCustom.ImageRectSize = Vector2.new(36, 36)
+
+SelectTeleport.Name = "SelectTeleport"
+SelectTeleport.Parent = SelectFrame
+SelectTeleport.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SelectTeleport.BackgroundTransparency = 1.000
+SelectTeleport.Position = UDim2.new(0.102272734, 0, 0.67412138, 0)
+SelectTeleport.Size = UDim2.new(0, 147, 0, 51)
+SelectTeleport.ZIndex = 2
+SelectTeleport.Font = Enum.Font.SourceSans
+SelectTeleport.Text = "       Teleports"
+SelectTeleport.TextColor3 = Color3.fromRGB(255, 255, 255)
+SelectTeleport.TextSize = 30.000
+SelectTeleport.TextWrapped = true
+SelectTeleport.TextXAlignment = Enum.TextXAlignment.Left
+
+location_on.Name = "location_on"
+location_on.Parent = SelectTeleport
+location_on.BackgroundTransparency = 1.000
+location_on.Position = UDim2.new(0.00340136886, 0, 0.166666657, 0)
+location_on.Size = UDim2.new(0, 39, 0, 39)
+location_on.ZIndex = 2
+location_on.Image = "rbxassetid://3926305904"
+location_on.ImageRectOffset = Vector2.new(324, 564)
+location_on.ImageRectSize = Vector2.new(36, 36)
 
 FoodFrame.Name = "FoodFrame"
 FoodFrame.Parent = MainFrame
@@ -685,7 +719,7 @@ Umbrella.Name = "Umbrella"
 Umbrella.Parent = MiscFrame
 Umbrella.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Umbrella.BackgroundTransparency = 1.000
-Umbrella.Position = UDim2.new(0.236220479, 0, 0.026666671, 0)
+Umbrella.Position = UDim2.new(0.00524935126, 0, 0.026666671, 0)
 Umbrella.Size = UDim2.new(0, 200, 0, 50)
 Umbrella.Font = Enum.Font.SourceSans
 Umbrella.Text = "Umbrella"
@@ -698,7 +732,7 @@ LowHPHaori.Name = "LowHPHaori"
 LowHPHaori.Parent = MiscFrame
 LowHPHaori.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 LowHPHaori.BackgroundTransparency = 1.000
-LowHPHaori.Position = UDim2.new(0.236220479, 0, 0.376666665, 0)
+LowHPHaori.Position = UDim2.new(0.00524935126, 0, 0.376666665, 0)
 LowHPHaori.Size = UDim2.new(0, 200, 0, 50)
 LowHPHaori.Font = Enum.Font.SourceSans
 LowHPHaori.Text = "LowHP Haori"
@@ -711,7 +745,7 @@ StoneWeapons.Name = "StoneWeapons"
 StoneWeapons.Parent = MiscFrame
 StoneWeapons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 StoneWeapons.BackgroundTransparency = 1.000
-StoneWeapons.Position = UDim2.new(0.236220479, 0, 0.209999979, 0)
+StoneWeapons.Position = UDim2.new(0.00524935126, 0, 0.209999979, 0)
 StoneWeapons.Size = UDim2.new(0, 200, 0, 50)
 StoneWeapons.Font = Enum.Font.SourceSans
 StoneWeapons.Text = "Stone Weapons"
@@ -724,7 +758,7 @@ Dualkatanas.Name = "Dualkatanas"
 Dualkatanas.Parent = MiscFrame
 Dualkatanas.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Dualkatanas.BackgroundTransparency = 1.000
-Dualkatanas.Position = UDim2.new(0.236220479, 0, 0.543333352, 0)
+Dualkatanas.Position = UDim2.new(0.00524935126, 0, 0.543333352, 0)
 Dualkatanas.Size = UDim2.new(0, 200, 0, 50)
 Dualkatanas.Font = Enum.Font.SourceSans
 Dualkatanas.Text = "Dual Katanas"
@@ -737,7 +771,7 @@ Lamp.Name = "Lamp"
 Lamp.Parent = MiscFrame
 Lamp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Lamp.BackgroundTransparency = 1.000
-Lamp.Position = UDim2.new(0.236220479, 0, 0.706666708, 0)
+Lamp.Position = UDim2.new(0.00524935126, 0, 0.706666708, 0)
 Lamp.Size = UDim2.new(0, 200, 0, 50)
 Lamp.Font = Enum.Font.SourceSans
 Lamp.Text = "Lamp"
@@ -745,6 +779,104 @@ Lamp.TextColor3 = Color3.fromRGB(255, 255, 255)
 Lamp.TextScaled = true
 Lamp.TextSize = 14.000
 Lamp.TextWrapped = true
+
+FishingRod.Name = "FishingRod"
+FishingRod.Parent = MiscFrame
+FishingRod.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FishingRod.BackgroundTransparency = 1.000
+FishingRod.Position = UDim2.new(0.530183733, 0, 0.0266666654, 0)
+FishingRod.Size = UDim2.new(0, 172, 0, 50)
+FishingRod.Font = Enum.Font.SourceSans
+FishingRod.Text = "Fishing Rod"
+FishingRod.TextColor3 = Color3.fromRGB(255, 255, 255)
+FishingRod.TextScaled = true
+FishingRod.TextSize = 14.000
+FishingRod.TextWrapped = true
+
+Sharpness.Name = "Sharpness"
+Sharpness.Parent = MiscFrame
+Sharpness.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sharpness.BackgroundTransparency = 1.000
+Sharpness.Position = UDim2.new(0.530183733, 0, 0.193333343, 0)
+Sharpness.Size = UDim2.new(0, 172, 0, 50)
+Sharpness.Font = Enum.Font.SourceSans
+Sharpness.Text = "Sharpness"
+Sharpness.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sharpness.TextScaled = true
+Sharpness.TextSize = 14.000
+Sharpness.TextWrapped = true
+
+TeleportFrame.Name = "TeleportFrame"
+TeleportFrame.Parent = MainFrame
+TeleportFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+TeleportFrame.BorderSizePixel = 0
+TeleportFrame.Position = UDim2.new(-0.670000017, 0, 0.140000001, 0)
+TeleportFrame.Size = UDim2.new(0, 381, 0, 300)
+
+RenVillage.Name = "RenVillage"
+RenVillage.Parent = TeleportFrame
+RenVillage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RenVillage.BackgroundTransparency = 1.000
+RenVillage.Size = UDim2.new(0, 200, 0, 50)
+RenVillage.Font = Enum.Font.SourceSans
+RenVillage.Text = "Rengoku Village"
+RenVillage.TextColor3 = Color3.fromRGB(255, 255, 255)
+RenVillage.TextScaled = true
+RenVillage.TextSize = 14.000
+RenVillage.TextWrapped = true
+
+Spawnvillage.Name = "Spawnvillage"
+Spawnvillage.Parent = TeleportFrame
+Spawnvillage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Spawnvillage.BackgroundTransparency = 1.000
+Spawnvillage.Position = UDim2.new(0, 0, 0.173333332, 0)
+Spawnvillage.Size = UDim2.new(0, 200, 0, 50)
+Spawnvillage.Font = Enum.Font.SourceSans
+Spawnvillage.Text = "Spawn Village"
+Spawnvillage.TextColor3 = Color3.fromRGB(255, 255, 255)
+Spawnvillage.TextScaled = true
+Spawnvillage.TextSize = 14.000
+Spawnvillage.TextWrapped = true
+
+FishingDocks.Name = "FishingDocks"
+FishingDocks.Parent = TeleportFrame
+FishingDocks.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FishingDocks.BackgroundTransparency = 1.000
+FishingDocks.Position = UDim2.new(0.00524934381, 0, 0.340000004, 0)
+FishingDocks.Size = UDim2.new(0, 200, 0, 50)
+FishingDocks.Font = Enum.Font.SourceSans
+FishingDocks.Text = "Fishing Docks"
+FishingDocks.TextColor3 = Color3.fromRGB(255, 255, 255)
+FishingDocks.TextScaled = true
+FishingDocks.TextSize = 14.000
+FishingDocks.TextWrapped = true
+
+InsectPlace.Name = "InsectPlace"
+InsectPlace.Parent = TeleportFrame
+InsectPlace.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InsectPlace.BackgroundTransparency = 1.000
+InsectPlace.Position = UDim2.new(0.00524934381, 0, 0.50999999, 0)
+InsectPlace.Size = UDim2.new(0, 200, 0, 50)
+InsectPlace.Font = Enum.Font.SourceSans
+InsectPlace.Text = "Butterfly Estates"
+InsectPlace.TextColor3 = Color3.fromRGB(255, 255, 255)
+InsectPlace.TextScaled = true
+InsectPlace.TextSize = 14.000
+InsectPlace.TextWrapped = true
+
+Kayaga.Name = "Kayaga"
+Kayaga.Parent = TeleportFrame
+Kayaga.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Kayaga.BackgroundTransparency = 1.000
+Kayaga.Position = UDim2.new(0.00524934381, 0, 0.676666677, 0)
+Kayaga.Size = UDim2.new(0, 200, 0, 50)
+Kayaga.Font = Enum.Font.SourceSans
+Kayaga.Text = "Demon Slayer HQ"
+Kayaga.TextColor3 = Color3.fromRGB(255, 255, 255)
+Kayaga.TextScaled = true
+Kayaga.TextSize = 14.000
+Kayaga.TextWrapped = true
+
 
 local GUITOGGLE = false
 local uis = game:GetService("UserInputService")
@@ -772,6 +904,7 @@ local MiscToggle = false
 local FoodToggle = false
 local BreathToggle = false
 local CustomToggle = false
+local TeleportToggle  = false
 --animations
 print("SADASD")
 local SelectTweenIN = TS:Create(SelectFrame, TI1, {Position=UDim2.new(-0.014, 0,0.118, 0)}) 
@@ -791,6 +924,9 @@ local OutFrameBreath = TS:Create(BreathingFrame,TI1, {Position=UDim2.new(1.011, 
 
 local InFrameCustom = TS:Create(CustomFrame,TI1, {Position=UDim2.new(0.32, 0,0.14, 0)})
 local OutFrameCustom = TS:Create(CustomFrame,TI1, {Position=UDim2.new(1.011, 0,0.14, 0)})
+
+local InFrameTeleport = TS:Create(TeleportFrame,TI1, {Position=UDim2.new(0.32, 0,0.14, 0)})
+local OutFrameTeleport = TS:Create(TeleportFrame,TI1, {Position=UDim2.new(1.011, 0,0.14, 0)})
 --functions
 print("BASDWAEA")
 local function ResetCustomFrame()
@@ -804,6 +940,9 @@ local function ResetBreathingFrame()
 end
 local function ResetFoodFrame()
 	FoodFrame.Position = UDim2.new(-0.67, 0,0.14, 0)
+end
+local function ResetTeleportFrame()
+	TeleportFrame.Position = UDim2.new(-0.67, 0,0.14, 0)
 end
 
 SelectButton.MouseButton1Click:Connect(function()
@@ -845,7 +984,12 @@ SelectMisc.MouseButton1Click:Connect(function()
 		ResetCustomFrame()
 		CustomToggle = false
 	end
-
+	if TeleportToggle == true then
+		OutFrameTeleport:Play()
+		wait(1.1)
+		ResetTeleportFrame()
+		TeleportToggle = false
+	end
 end)
 
 SelectBreathing.MouseButton1Click:Connect(function()
@@ -869,7 +1013,12 @@ SelectBreathing.MouseButton1Click:Connect(function()
 		ResetMiscFrame() 
 		MiscToggle = false
 	end
-
+	if TeleportToggle == true then
+		OutFrameTeleport:Play()
+		wait(1.1)
+		ResetTeleportFrame()
+		TeleportToggle = false
+	end
 end)
 
 SelectFood.MouseButton1Click:Connect(function()
@@ -893,7 +1042,12 @@ SelectFood.MouseButton1Click:Connect(function()
 		ResetBreathingFrame()
 		BreathToggle = false
 	end
-
+	if TeleportToggle == true then
+		OutFrameTeleport:Play()
+		wait(1.1)
+		ResetTeleportFrame()
+		TeleportToggle = false
+	end
 end)
 
 SelectCustom.MouseButton1Click:Connect(function()
@@ -917,7 +1071,41 @@ SelectCustom.MouseButton1Click:Connect(function()
 		ResetBreathingFrame()
 		BreathToggle = false
 	end
+	if TeleportToggle == true then
+		OutFrameTeleport:Play()
+		wait(1.1)
+		ResetTeleportFrame()
+		TeleportToggle = false
+	end
+end)
 
+SelectTeleport.MouseButton1Click:Connect(function()
+	InFrameTeleport:Play()
+	TeleportToggle = true
+	if FoodToggle == true then
+		OutFrameFood:Play()
+		wait(1.1)
+		ResetFoodFrame()
+		FoodToggle = false
+	end
+	if MiscToggle == true then
+		OutFrameMisc:Play()
+		wait(1.1)
+		ResetMiscFrame()
+		MiscToggle = false
+	end
+	if BreathToggle == true then
+		OutFrameBreath:Play()
+		wait(1.1)
+		ResetBreathingFrame()
+		BreathToggle = false
+	end
+	if CustomToggle == true then
+		OutFrameCustom:Play()
+		wait(1.1)
+		ResetCustomFrame()
+		CustomToggle = false
+	end
 end)
 
 ResetBR.MouseButton1Click:connect(function()
@@ -1465,4 +1653,42 @@ BlackHaori.MouseButton1Click:Connect(function()
 			end
 		end
 	end
+end)
+Lamp.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace.Shop:GetChildren()) do
+		if v.Name == "" and v.ClassName == "Model" then
+			print("FOUND")
+			if v.Value.Value == "Light" then
+				fireclickdetector(v.Head.ClickDetector)
+			end
+		end
+	end
+end)
+FishingRod.MouseButton1Click:Connect(function()
+	for i,v in pairs(game.Workspace.Shop:GetChildren()) do
+		if v.Name == "" and v.ClassName == "Model" then
+			print("FOUND")
+			if v.Value.Value == "Fishing Rod" then
+				fireclickdetector(v.Head.ClickDetector)
+			end
+		end
+	end
+end)
+Sharpness.MouseButton1Click:Connect(function()
+	game.ReplicatedStorage.Events.Sharpen:FireServer()
+end)
+RenVillage.MouseButton1Click:Connect(function()
+	game.Workspace.Living:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.CFrame = game.Workspace.NPC.Flame.Head.CFrame*CFrame.new(0,3,0)
+end)
+FishingDocks.MouseButton1Click:Connect(function()
+	game.Workspace.Living:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.CFrame = CFrame.new(86.4342, -15.6843, 387.106)
+end)
+Kayaga.MouseButton1Click:Connect(function()
+	game.Workspace.Living:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.CFrame = game.Workspace.Kagaya.Head.CFrame*CFrame.new(0,3,0)
+end)
+InsectPlace.MouseButton1Click:Connect(function()
+	game.Workspace.Living:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.CFrame = game.Workspace.NPC.Insect.Head.CFrame*CFrame.new(0,3,0)
+end)
+Spawnvillage.MouseButton1Click:Connect(function()
+	game.Workspace.Living:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.CFrame = CFrame.new(284.843, 11.2, -8.56908)
 end)
