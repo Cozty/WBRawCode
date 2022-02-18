@@ -1147,7 +1147,7 @@ end)
 
 Sleeve1.MouseButton1Click:Connect(function()
 	for _, v in pairs(game.Workspace.Living:FindFirstChild(game.Players.LocalPlayer.Name):GetChildren()) do
-    if v.Name == "Haoripart" and v.MeshId == "rbxassetid://6009313450" and v.ManualWeld.Part1 == game.Workspace.Living.IICoztyII:FindFirstChild("Right Arm") then
+    if v.Name == "Haoripart" and v.MeshId == "rbxassetid://6009313450" and v.ManualWeld.Part1 == game.Workspace.Living:FindFirstChild(game.Players.LocalPlayer.Name):FindFirstChild("Right Arm") then
         print(v.ManualWeld.Part1)
         v:Destroy()
         end
