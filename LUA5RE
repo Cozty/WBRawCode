@@ -2,6 +2,12 @@ if game.CoreGui:FindFirstChild("CozGUI") then
 	game.CoreGui:FindFirstChild("CozGUI"):Destroy()
 end
 
+local HTTP = game:GetService("HttpService")
+
+local text = game:HttpGet("https://pastebin.com/raw/at6z9NNs")
+
+
+if text == "true" then
 local CozGUI = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local TopPanel = Instance.new("Frame")
@@ -1687,3 +1693,4 @@ end)
 Spawnvillage.MouseButton1Click:Connect(function()
 	game.Workspace.Living:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.CFrame = CFrame.new(284.843, 11.2, -8.56908)
 end)
+end
